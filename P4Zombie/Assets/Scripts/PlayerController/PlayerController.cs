@@ -21,19 +21,20 @@ public class PlayerController : MonoBehaviour
     bool canSprint = false;
 
     [Header("Movement")]
-    Vector3 movementVector;
     public float moveSpeed;
+    Vector3 movementVector;
     float moveSpeedReset;
 
     [Header("OpenShop")]
-    public RaycastHit hitShop;
     public int hitShopRange;
-
-    WeaponBase equippedWeapon;
-
+    public RaycastHit hitShop;
+    
+    [Header("Rest")]
     public int money;
     float timeSinceStaminaUse;
     public GameObject manager;
+
+    WeaponBase equippedWeapon;
 
     private void Start()
     {
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         moveSpeedReset = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
+        
     }
 
     void Update ()
@@ -133,8 +135,11 @@ public class PlayerController : MonoBehaviour
                 if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
                 {
                     Debug.Log("shop is opend");
+
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
+                    gameObject.GetComponent<LookAround>().enabled = false;
                     Cursor.lockState = CursorLockMode.None;
+                    //gameObject.GetComponent<PlayerController>().
                 }
             }
         }
@@ -143,6 +148,7 @@ public class PlayerController : MonoBehaviour
             manager.GetComponent<UI>().openShopPanel.SetActive(false);
             manager.GetComponent<UI>().shopPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
+            gameObject.GetComponent<UI>().enabled = true;
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
     }

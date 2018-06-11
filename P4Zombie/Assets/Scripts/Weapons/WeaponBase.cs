@@ -15,6 +15,7 @@ public class WeaponBase : MonoBehaviour
     public int ammo;
 
     public RaycastHit hit;
+    public int ownValue;
 
     private void Start()
     {
@@ -83,5 +84,10 @@ public class WeaponBase : MonoBehaviour
         bulletInClip = clipSize;
         canFire = true;
         Debug.Log("reloaded");
+    }
+
+    public virtual void OwnCurrency()
+    {
+
     }
 }
