@@ -5,15 +5,26 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    public GameObject openShopPanel;
     public GameObject shopPanel;
+    public GameObject openShopPanel;
+
+    public GameObject openShopText;
+    public GameObject CloseShopText;
+
+    public Button button1;
+    public Button button2;
+    public Button button3;
 
 	void Start ()
     {
         Cursor.lockState = CursorLockMode.Locked;
 
-        openShopPanel.SetActive(false);
         shopPanel.SetActive(false);
+        openShopPanel.SetActive(false);
+
+        openShopText.SetActive(false);
+        CloseShopText.SetActive(false);
+
 	}
 
 	void Update ()

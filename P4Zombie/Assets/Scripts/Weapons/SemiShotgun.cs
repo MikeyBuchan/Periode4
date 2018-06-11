@@ -24,4 +24,9 @@ public class SemiShotgun : Shotgun
         }
     }
 
+    public override void OwnCurrency()
+    {
+        ownValue = 20;
+    }
+
 }
