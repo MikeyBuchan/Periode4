@@ -131,15 +131,19 @@ public class PlayerController : MonoBehaviour
             if (hitShop.transform.tag == ("Shop"))
             {
                 manager.GetComponent<UI>().openShopPanel.SetActive(true);
+                manager.GetComponent<UI>().openShopText.SetActive(true);
 
                 if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
                 {
                     Debug.Log("shop is opend");
 
+                    manager.GetComponent<UI>().openShopText.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
-                    gameObject.GetComponent<LookAround>().enabled = false;
+                    manager.GetComponent<UI>().CloseShopText.SetActive(true);
+
+                    gameObject.GetComponentInChildren<LookAround>().enabled = false;
+                    // manier vinden om move() op vals te zetten
                     Cursor.lockState = CursorLockMode.None;
-                    //gameObject.GetComponent<PlayerController>().
                 }
             }
         }
@@ -147,8 +151,8 @@ public class PlayerController : MonoBehaviour
         {
             manager.GetComponent<UI>().openShopPanel.SetActive(false);
             manager.GetComponent<UI>().shopPanel.SetActive(false);
+            
             Cursor.lockState = CursorLockMode.Locked;
-            gameObject.GetComponent<UI>().enabled = true;
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
     }

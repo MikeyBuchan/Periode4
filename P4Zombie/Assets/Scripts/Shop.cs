@@ -40,8 +40,11 @@ public class Shop : MonoBehaviour
             Debug.Log("CloseShop");
 
             GameObject.FindWithTag("Manager").GetComponent<UI>().openShopPanel.SetActive(false);
-            GameObject.FindWithTag("Manager").GetComponent<UI>().closeShopPanel.SetActive(false);
             GameObject.FindWithTag("Manager").GetComponent<UI>().shopPanel.SetActive(false);
+            GameObject.FindWithTag("Manager").GetComponent<UI>().CloseShopText.SetActive(false);
+            GameObject.FindWithTag("Manager").GetComponent<UI>().openShopText.SetActive(false);
+
+            GameObject.FindWithTag("Plyer").GetComponentInChildren<UI>().enabled = true;
 
             Cursor.lockState = CursorLockMode.Locked;
         }

@@ -142,7 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 1699432206}
   openShopPanel: {fileID: 1188542834}
-  closeShopPanel: {fileID: 2021081845}
+  openShopText: {fileID: 1655369734}
+  CloseShopText: {fileID: 2021081845}
+  button1: {fileID: 379975020}
+  button2: {fileID: 124924388}
+  button3: {fileID: 457884754}
 --- !u!4 &33301524
 Transform:
   m_ObjectHideFlags: 0
