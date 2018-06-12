@@ -5,10 +5,11 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public List<WeaponBase> shopWeaponHolder;
+    public GameObject manager;
 
     void Start()
     {
-        
+        manager = GameObject.FindWithTag("Manager");
     }
 
     void Update()
@@ -23,7 +24,7 @@ public class Shop : MonoBehaviour
         {
             if(weapon.ownValue <= GameObject.FindWithTag("Player").GetComponent<PlayerController>().money)
             {
-                Debug.Log("Buyeble");
+                Debug.Log("Buyable");
                 
             }
             if (shopWeaponHolder[1].ownValue <= GameObject.FindWithTag("Player").GetComponent<PlayerController>().money)
@@ -35,16 +36,18 @@ public class Shop : MonoBehaviour
 
     public void ExitShop()
     {
-        if(GameObject.FindWithTag("Manager").GetComponent<UI>().openShopPanel && Input.GetButtonDown("Interact") == true)
+        if(manager.GetComponent<UI>().shopPanel == true && Input.GetButtonDown("Interact") == true)
         {
             Debug.Log("CloseShop");
+            
+            manager.GetComponent<UI>().CloseShopText.SetActive(false);
+            manager.GetComponent<UI>().openShopText.SetActive(false);
 
-            GameObject.FindWithTag("Manager").GetComponent<UI>().openShopPanel.SetActive(false);
-            GameObject.FindWithTag("Manager").GetComponent<UI>().shopPanel.SetActive(false);
-            GameObject.FindWithTag("Manager").GetComponent<UI>().CloseShopText.SetActive(false);
-            GameObject.FindWithTag("Manager").GetComponent<UI>().openShopText.SetActive(false);
+            manager.GetComponent<UI>().openShopPanel.SetActive(false);
+            manager.GetComponent<UI>().shopPanel.SetActive(false);
 
-            GameObject.FindWithTag("Plyer").GetComponentInChildren<UI>().enabled = true;
+            manager.GetComponentInChildren<UI>().enabled = true;
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool = false;
 
             Cursor.lockState = CursorLockMode.Locked;
         }

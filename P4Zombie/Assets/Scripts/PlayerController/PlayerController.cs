@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public int money;
     float timeSinceStaminaUse;
     public GameObject manager;
+    public bool shopOpenBool = false;
 
     WeaponBase equippedWeapon;
 
@@ -130,12 +131,18 @@ public class PlayerController : MonoBehaviour
         {
             if (hitShop.transform.tag == ("Shop"))
             {
-                manager.GetComponent<UI>().openShopPanel.SetActive(true);
-                manager.GetComponent<UI>().openShopText.SetActive(true);
+                if(shopOpenBool == false)
+                {
+                    manager.GetComponent<UI>().openShopPanel.SetActive(true);
+                    manager.GetComponent<UI>().openShopText.SetActive(true);
+                    
+                }
 
                 if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
                 {
                     Debug.Log("shop is opend");
+
+                    shopOpenBool = true;
 
                     manager.GetComponent<UI>().openShopText.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
@@ -151,6 +158,12 @@ public class PlayerController : MonoBehaviour
         {
             manager.GetComponent<UI>().openShopPanel.SetActive(false);
             manager.GetComponent<UI>().shopPanel.SetActive(false);
+            manager.GetComponent<UI>().CloseShopText.SetActive(false);
+            manager.GetComponent<UI>().shopPanel.SetActive(false);
+            gameObject.GetComponentInChildren<LookAround>().enabled = true;
+
+
+            shopOpenBool = false;
             
             Cursor.lockState = CursorLockMode.Locked;
         }
