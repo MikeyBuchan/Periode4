@@ -6,11 +6,13 @@ public class ZombieScript : MonoBehaviour
 {
     public int health;
     public int currency;
+    public int ownIndex;
 
-    private void Update()
+    void Update()
     {
         if(health <= 0)
         {
+            GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().curAmountZombie.RemoveAt(ownIndex);
             Destroy(gameObject);
         }
     }
