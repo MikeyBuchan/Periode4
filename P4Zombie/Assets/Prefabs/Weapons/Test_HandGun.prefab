@@ -112,8 +112,9 @@ MonoBehaviour:
   range: 5
   fireRate: 3
   automatic: 0
+  canFire: 1
   reloadTime: 3
   bulletInClip: 0
   clipSize: 24
   ammo: 200
-  currentCurrency: 0
+  ownValue: 5

@@ -20,7 +20,6 @@ public class MobSpawner : MonoBehaviour
     void Update()
     {
         SpawnZombie();
-        
     }
 
     void CheckWave()

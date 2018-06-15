@@ -112,10 +112,11 @@ MonoBehaviour:
   range: 10
   fireRate: 1
   automatic: 0
+  canFire: 1
   reloadTime: 2
   bulletInClip: 5
   clipSize: 0
   ammo: 100
-  currentCurrency: 0
+  ownValue: 10
   pellets: 0
-  dir: {x: 0, y: 0, z: 1}
+  spread: 0

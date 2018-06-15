@@ -23,10 +23,4 @@ public class SemiShotgun : Shotgun
             Reload();
         }
     }
-
-    public override void OwnCurrency()
-    {
-        ownValue = 20;
-    }
-
 }

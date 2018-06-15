@@ -9,9 +9,4 @@ public class HandGun : WeaponBase
         Debug.DrawRay(transform.position, transform.forward * range, Color.green);
         base.Shoot();
     }
-
-    public override void OwnCurrency()
-    {
-        ownValue = 0;
-    }
 }
