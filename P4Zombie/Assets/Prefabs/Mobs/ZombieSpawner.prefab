@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114287137987452392}
   m_Layer: 0
   m_Name: ZombieSpawner
-  m_TagString: Untagged
+  m_TagString: ZomSpawner
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,4 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombie: {fileID: 1434266173895700, guid: 44ecb940fc9825d4b94981d93e50920a, type: 2}
   spawTime: 3
-  spawnCheck: 0
+  maySpawn: 0
+  curAmountZombie: []
+  spawnAmount: 0
+  curSpawned: 0

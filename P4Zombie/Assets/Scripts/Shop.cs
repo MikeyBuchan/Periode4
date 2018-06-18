@@ -14,26 +14,16 @@ public class Shop : MonoBehaviour
 
     void Update()
     {
-        CheckCurrency();
         ExitShop();
     }
 
-    public void CheckCurrency()
+    public void ShopIndex()
     {
-        foreach (WeaponBase weapon in shopWeaponHolder)
-        {
-            if(weapon.ownValue <= GameObject.FindWithTag("Player").GetComponent<PlayerController>().money)
-            {
-                Debug.Log("Buyable");
-                
-            }
-            if (shopWeaponHolder[1].ownValue <= GameObject.FindWithTag("Player").GetComponent<PlayerController>().money)
-            {
-                
-            }
-        }
+        
     }
-
+    /*
+     * button 1 == index 1
+     */
     public void ExitShop()
     {
         if(manager.GetComponent<UI>().shopPanel == true && Input.GetButtonDown("Interact") == true)

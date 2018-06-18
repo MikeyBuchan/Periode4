@@ -117,5 +117,6 @@ MonoBehaviour:
   bulletInClip: 0
   clipSize: 10
   ammo: 100
+  ownValue: 10
   pellets: 6
   spread: 0.4

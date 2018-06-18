@@ -6,28 +6,64 @@ public class MobSpawner : MonoBehaviour
 {
     public GameObject zombie;
     public float spawTime;
-    public bool spawnCheck;
+    public bool maySpawn;
+
+    public List<GameObject> curAmountZombie;
+    public int spawnAmount;
+    public int curSpawned;
 
     void Start()
     {
-        spawnCheck = true;
+        maySpawn = true;
     }
 
     void Update()
     {
-        if (spawnCheck == true)
+        SpawnZombie();
+    }
+
+    void CheckWave()
+    {
+        if(curSpawned <= spawnAmount)
+        {
+            maySpawn = true;
+
+            if (curAmountZombie.Count == spawnAmount)
+            {
+                StopCoroutine(Spawner());
+
+                if (curAmountZombie == null)
+                {
+                    StartNewWave();
+                }
+
+            }
+        }
+
+    }
+
+    void StartNewWave()
+    {
+        curSpawned = 0;
+        spawnAmount *= 2;
+        SpawnZombie();
+    }
+
+    void SpawnZombie()
+    {
+        if (maySpawn == true)
         {
             StartCoroutine(Spawner());
-            spawnCheck = false;
-            Debug.Log("Sawn");
         }
     }
 
     IEnumerator Spawner()
     {
+        maySpawn = false;
+        GameObject g = Instantiate(zombie, transform.position, transform.rotation);
+        curAmountZombie.Add(g);
         yield return new WaitForSeconds(spawTime);
-        Instantiate(zombie, transform.position, transform.rotation);
-        spawnCheck = true;
-        Debug.Log("Ie werkt");
+        curSpawned++;
+        CheckWave();
     }
 }
