@@ -31,9 +31,11 @@ public class MobSpawner : MonoBehaviour
             if (curAmountZombie.Count == spawnAmount)
             {
                 StopCoroutine(Spawner());
+                Debug.Log("Spawner stopt");
 
                 if (curAmountZombie == null)
                 {
+                    Debug.Log("New Wave");
                     StartNewWave();
                 }
 
