@@ -85,9 +85,4 @@ public class WeaponBase : MonoBehaviour
         canFire = true;
         Debug.Log("reloaded");
     }
-
-    public virtual void OwnCurrency()
-    {
-
-    }
 }

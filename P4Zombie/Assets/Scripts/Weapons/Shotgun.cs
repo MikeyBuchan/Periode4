@@ -38,9 +38,4 @@ public class Shotgun : WeaponBase
 
         Debug.Log("Shotgun fired");
     }
-
-    public override void OwnCurrency()
-    {
-        ownValue = 10;
-    }
 }
