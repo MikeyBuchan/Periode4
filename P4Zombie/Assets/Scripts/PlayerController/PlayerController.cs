@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
     [Header("Stamina")]
     public float maxStamina;
     public float stamina;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     [Header("OpenShop")]
     public int hitShopRange;
     public RaycastHit hitShop;
+    public List<GameObject> Weapons = new List<GameObject>();
     
     [Header("Rest")]
     public int money;
