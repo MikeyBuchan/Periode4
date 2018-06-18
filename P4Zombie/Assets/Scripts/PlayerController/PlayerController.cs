@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
     [Header("Stamina")]
     public float maxStamina;
     public float stamina;
@@ -22,12 +23,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     public float moveSpeed;
+    public float moveSpeedBaseValue;
     Vector3 movementVector;
     float moveSpeedReset;
 
     [Header("OpenShop")]
     public int hitShopRange;
     public RaycastHit hitShop;
+    public List<GameObject> Weapons = new List<GameObject>();
     
     [Header("Rest")]
     public int money;
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         stamina = maxStamina;
         moveSpeedReset = moveSpeed;
+        moveSpeedBaseValue = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
         
@@ -144,12 +148,13 @@ public class PlayerController : MonoBehaviour
 
                     shopOpenBool = true;
 
+
                     manager.GetComponent<UI>().openShopText.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
                     manager.GetComponent<UI>().CloseShopText.SetActive(true);
-
+                    
                     gameObject.GetComponentInChildren<LookAround>().enabled = false;
-                    // manier vinden om move() op vals te zetten
+                    moveSpeed = 0;
                     Cursor.lockState = CursorLockMode.None;
                 }
             }

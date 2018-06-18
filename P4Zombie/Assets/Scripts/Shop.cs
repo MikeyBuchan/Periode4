@@ -7,6 +7,9 @@ public class Shop : MonoBehaviour
     public List<WeaponBase> shopWeaponHolder;
     public GameObject manager;
 
+    PlayerController player;
+    WeaponBase weaponBase;
+
     void Start()
     {
         manager = GameObject.FindWithTag("Manager");
@@ -16,14 +19,15 @@ public class Shop : MonoBehaviour
     {
         ExitShop();
     }
-
-    public void ShopIndex()
+    
+    public void HandGunEquip()
     {
-        
+        if (player.money >= weaponBase.ownValue)
+        {
+
+        }
     }
-    /*
-     * button 1 == index 1
-     */
+    
     public void ExitShop()
     {
         if(manager.GetComponent<UI>().shopPanel == true && Input.GetButtonDown("Interact") == true)
@@ -37,6 +41,7 @@ public class Shop : MonoBehaviour
             manager.GetComponent<UI>().shopPanel.SetActive(false);
 
             manager.GetComponentInChildren<UI>().enabled = true;
+            player.moveSpeed = player.moveSpeedBaseValue;
             GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool = false;
 
             Cursor.lockState = CursorLockMode.Locked;
