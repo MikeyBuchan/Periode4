@@ -3,17 +3,12 @@ guid: c8852c6a4082ebd4f954de11bafbb88b
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cube
-    100004: Cylinder
-    100006: Lamp
-    100008: //RootNode
-    400000: Camera
-    400002: Cube
-    400004: Cylinder
-    400006: Lamp
-    400008: //RootNode
-    2000000: Camera
+    100000: Cube
+    100002: Cylinder
+    100004: //RootNode
+    400000: Cube
+    400002: Cylinder
+    400004: //RootNode
     2100000: No Name
     2300000: Cube
     2300002: Cylinder
@@ -21,7 +16,6 @@ ModelImporter:
     3300002: Cylinder
     4300000: Cube
     4300002: Cylinder
-    10800000: Lamp
   externalObjects: {}
   materials:
     importMaterials: 1
