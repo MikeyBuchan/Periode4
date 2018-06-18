@@ -144,12 +144,13 @@ public class PlayerController : MonoBehaviour
 
                     shopOpenBool = true;
 
+
                     manager.GetComponent<UI>().openShopText.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
                     manager.GetComponent<UI>().CloseShopText.SetActive(true);
-
+                    // move uitzetten
                     gameObject.GetComponentInChildren<LookAround>().enabled = false;
-                    // manier vinden om move() op vals te zetten
+                    
                     Cursor.lockState = CursorLockMode.None;
                 }
             }
