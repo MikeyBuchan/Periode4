@@ -41,6 +41,7 @@ public class Shop : MonoBehaviour
             manager.GetComponent<UI>().shopPanel.SetActive(false);
 
             manager.GetComponentInChildren<UI>().enabled = true;
+            player.moveSpeed = player.moveSpeedBaseValue;
             GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool = false;
 
             Cursor.lockState = CursorLockMode.Locked;

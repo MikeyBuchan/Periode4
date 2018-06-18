@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     public float moveSpeed;
+    public float moveSpeedBaseValue;
     Vector3 movementVector;
     float moveSpeedReset;
 
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         stamina = maxStamina;
         moveSpeedReset = moveSpeed;
+        moveSpeedBaseValue = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
         
@@ -148,9 +150,9 @@ public class PlayerController : MonoBehaviour
                     manager.GetComponent<UI>().openShopText.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
                     manager.GetComponent<UI>().CloseShopText.SetActive(true);
-                    // move uitzetten
-                    gameObject.GetComponentInChildren<LookAround>().enabled = false;
                     
+                    gameObject.GetComponentInChildren<LookAround>().enabled = false;
+                    moveSpeed = 0;
                     Cursor.lockState = CursorLockMode.None;
                 }
             }

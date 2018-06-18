@@ -305,7 +305,7 @@ RectTransform:
   m_Children:
   - {fileID: 1716409030}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 324902828}
   - component: {fileID: 324902827}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: MP5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -968,7 +968,7 @@ RectTransform:
   m_Children:
   - {fileID: 1668569734}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1322,7 +1322,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -1333,7 +1333,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hand gun
+  m_Text: 'Light machineGun
+
+'
 --- !u!222 &391640880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1503,7 +1505,7 @@ GameObject:
   - component: {fileID: 442474236}
   - component: {fileID: 442474235}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: LongRange Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1521,7 +1523,7 @@ RectTransform:
   m_Children:
   - {fileID: 1694557480}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1665,7 +1667,7 @@ GameObject:
   - component: {fileID: 457884755}
   - component: {fileID: 457884754}
   m_Layer: 5
-  m_Name: SemiShotGun
+  m_Name: Mosberg(Semi Shot)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1683,7 +1685,7 @@ RectTransform:
   m_Children:
   - {fileID: 2105812304}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1764,6 +1766,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457884752}
+--- !u!1 &463885249 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 088c70b4ec9673c41a5fab51269d38db, type: 3}
+  m_PrefabInternal: {fileID: 982866487}
 --- !u!1001 &484861075
 Prefab:
   m_ObjectHideFlags: 0
@@ -1881,7 +1887,7 @@ GameObject:
   - component: {fileID: 533709391}
   - component: {fileID: 533709390}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Eagel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1899,7 +1905,7 @@ RectTransform:
   m_Children:
   - {fileID: 848952321}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2156,7 +2162,7 @@ GameObject:
   - component: {fileID: 618738511}
   - component: {fileID: 618738510}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: LightMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2174,7 +2180,7 @@ RectTransform:
   m_Children:
   - {fileID: 391640878}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2498,7 +2504,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hand gun
+  m_Text: 'Deserd Eagel
+
+'
 --- !u!222 &848952323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2927,7 +2935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 088c70b4ec9673c41a5fab51269d38db, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 088c70b4ec9673c41a5fab51269d38db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2940,6 +2948,10 @@ Prefab:
     - target: {fileID: 400004, guid: 088c70b4ec9673c41a5fab51269d38db, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 088c70b4ec9673c41a5fab51269d38db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 088c70b4ec9673c41a5fab51269d38db, type: 3}
@@ -3222,16 +3234,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1909291671027288, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114718413546473690, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
         type: 2}
       propertyPath: sensitivity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114110813694481314, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
+        type: 2}
+      propertyPath: moveSpeedBaseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114110813694481314, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1026273747 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100006, guid: 0f773cc001a384c479b4c901979341c8, type: 3}
+  m_PrefabInternal: {fileID: 1573039638}
 --- !u!1001 &1077187422
 Prefab:
   m_ObjectHideFlags: 0
@@ -3437,7 +3463,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 371c2ad535e9cfe40a1c6eb0f2fc3635, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 371c2ad535e9cfe40a1c6eb0f2fc3635, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3449,7 +3475,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 371c2ad535e9cfe40a1c6eb0f2fc3635, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 371c2ad535e9cfe40a1c6eb0f2fc3635, type: 3}
@@ -4544,7 +4570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 0f773cc001a384c479b4c901979341c8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f773cc001a384c479b4c901979341c8, type: 3}
@@ -4816,7 +4842,7 @@ GameObject:
   - component: {fileID: 1668569736}
   - component: {fileID: 1668569735}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Mp5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4872,7 +4898,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hand gun
+  m_Text: 'MP5
+
+'
 --- !u!222 &1668569736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4990,7 +5018,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -5001,7 +5029,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hand gun
+  m_Text: 'LongRange ShotGun
+
+'
 --- !u!222 &1694557482
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5037,12 +5067,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 379975019}
-  - {fileID: 124924387}
-  - {fileID: 457884753}
   - {fileID: 533709389}
+  - {fileID: 124924387}
   - {fileID: 442474234}
-  - {fileID: 618738509}
+  - {fileID: 457884753}
   - {fileID: 324902826}
+  - {fileID: 618738509}
   m_Father: {fileID: 1414492184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5180,6 +5210,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1716409029}
+--- !u!1 &1752106699 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 371c2ad535e9cfe40a1c6eb0f2fc3635, type: 3}
+  m_PrefabInternal: {fileID: 1145311517}
 --- !u!1001 &1762481040
 Prefab:
   m_ObjectHideFlags: 0
@@ -5635,7 +5669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b8ca7317fec7ab641a2a15f7095e7b49, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b8ca7317fec7ab641a2a15f7095e7b49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -5651,11 +5685,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b8ca7317fec7ab641a2a15f7095e7b49, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8ca7317fec7ab641a2a15f7095e7b49, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &2004284795 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: b8ca7317fec7ab641a2a15f7095e7b49, type: 3}
+  m_PrefabInternal: {fileID: 2002369894}
 --- !u!1001 &2009402116
 Prefab:
   m_ObjectHideFlags: 0
@@ -5836,6 +5874,68 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021081845}
+--- !u!1 &2034523438 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+  m_PrefabInternal: {fileID: 2055413773}
+--- !u!1001 &2055413773
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 118593703}
+    m_Modifications:
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38513827
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3089761
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7687204
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1001 &2055934648
 Prefab:
   m_ObjectHideFlags: 0
@@ -5964,14 +6064,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curWeapon:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 463885249}
+  - {fileID: 2034523438}
+  - {fileID: 1026273747}
+  - {fileID: 2004284795}
+  - {fileID: 1752106699}
 --- !u!1001 &2073013505
 Prefab:
   m_ObjectHideFlags: 0
@@ -6255,7 +6352,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Semi Shotgun
+  m_Text: 'Mosberg
+
+'
 --- !u!222 &2105812306
 CanvasRenderer:
   m_ObjectHideFlags: 0
