@@ -3,40 +3,26 @@ guid: 81432fcb81ee681468f2b1179fc7f126
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Armature
-    100002: Armature.001
-    100004: Bone
-    100006: Bone_end
-    100008: Camera
-    100010: Cube.000
-    100012: Cube.001
-    100014: //RootNode
-    100016: Lamp
-    400000: Armature
-    400002: Armature.001
-    400004: Bone
-    400006: Bone_end
-    400008: Camera
-    400010: Cube.000
-    400012: Cube.001
-    400014: //RootNode
-    400016: Lamp
-    2000000: Camera
+    100000: Cube.000
+    100002: Cube.001
+    100004: //RootNode
+    400000: Cube.000
+    400002: Cube.001
+    400004: //RootNode
     2100000: Material
+    2300000: Cube.000
+    2300002: Cube.001
+    3300000: Cube.000
+    3300002: Cube.001
     4300000: Cube.000
     4300002: Cube.001
-    7400000: Armature|Armature.002Action
-    7400002: Armature|ArmatureAction
-    7400004: Armature|Cube.000Action
-    7400006: Armature|Cube.001Action
-    7400008: Armature|Cube.001Action.001
-    7400010: Armature|CubeAction
-    7400012: Armature|CubeAction.001
+    7400000: Cube.000|ArmatureAction
+    7400002: Cube.000|Cube.000Action
+    7400004: Cube.000|Cube.001Action.001
+    7400006: Cube.001|ArmatureAction
+    7400008: Cube.001|Cube.000Action
+    7400010: Cube.001|Cube.001Action.001
     9500000: //RootNode
-    10800000: Lamp
-    13700000: Cube.000
-    13700002: Cube.001
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
