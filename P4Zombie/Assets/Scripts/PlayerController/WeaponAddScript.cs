@@ -5,10 +5,21 @@ using UnityEngine;
 public class WeaponAddScript : MonoBehaviour {
     public PlayerController playerScript;
     public GameObject weaponGameobject;
+    public int value;
 
     public void Weapon()
     {
-        Debug.Log("IT DOES SOMETHING");
-        playerScript.Weapons.Add(weaponGameobject);
+        if (playerScript.Weapons.Count < 2)
+        {
+            if (playerScript.money >= value)
+            {
+                {
+                    Debug.Log("IT DOES SOMETHING");
+                    playerScript.Weapons.Add(weaponGameobject);
+                    playerScript.money -= value;
+                }
+            }
+        }
+            
     }
 }

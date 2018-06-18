@@ -426,6 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 2068609351}
   weaponGameobject: {fileID: 100004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
+  value: 0
 --- !u!1001 &160775902
 Prefab:
   m_ObjectHideFlags: 0
@@ -1362,6 +1363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 2068609351}
   weaponGameobject: {fileID: 463885249}
+  value: 2
 --- !u!1 &391640877
 GameObject:
   m_ObjectHideFlags: 0
