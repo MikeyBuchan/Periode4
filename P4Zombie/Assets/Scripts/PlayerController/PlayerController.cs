@@ -38,8 +38,6 @@ public class PlayerController : MonoBehaviour
     public GameObject manager;
     public bool shopOpenBool = false;
 
-    WeaponBase equippedWeapon;
-
     private void Start()
     {
         stamina = maxStamina;
@@ -148,7 +146,6 @@ public class PlayerController : MonoBehaviour
 
                     shopOpenBool = true;
 
-
                     manager.GetComponent<UI>().openShopText.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
                     manager.GetComponent<UI>().CloseShopText.SetActive(true);
@@ -156,6 +153,7 @@ public class PlayerController : MonoBehaviour
                     gameObject.GetComponentInChildren<LookAround>().enabled = false;
                     moveSpeed = 0;
                     Cursor.lockState = CursorLockMode.None;
+
                 }
             }
         }
@@ -163,15 +161,15 @@ public class PlayerController : MonoBehaviour
         {
             manager.GetComponent<UI>().openShopPanel.SetActive(false);
             manager.GetComponent<UI>().shopPanel.SetActive(false);
-            manager.GetComponent<UI>().CloseShopText.SetActive(false);
-            manager.GetComponent<UI>().shopPanel.SetActive(false);
-            gameObject.GetComponentInChildren<LookAround>().enabled = true;
 
-
-            shopOpenBool = false;
-            
-            Cursor.lockState = CursorLockMode.Locked;
+            shopOpenBool = false;    
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
+
+        /*if (shopOpenBool == true && Input.GetButtonDown("Interact") == true)
+        {
+            GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
+        }*/
+
     }
 }
