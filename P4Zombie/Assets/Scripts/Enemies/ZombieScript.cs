@@ -6,26 +6,35 @@ public class ZombieScript : MonoBehaviour
 {
     public int health;
     public int currency;
-    public int index;
-    public int ownIndex;
+    int ownindex;
+
+    GameObject zomSpawner;
 
     void Start()
     {
-        index = GameObject.FindWithTag("ZomSpawner").GetComponent<MobSpawner>().curAmountZombie.Count;
-        for (int i = 0; i < index; i++)
-        {
-            index = ownIndex;
-            Debug.Log(ownIndex);
-            break;
-        }
+        zomSpawner = GameObject.FindWithTag("ZomSpawner");
     }
+
 
     void Update()
     {
         if (health <= 0)
         {
-            GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().curAmountZombie.RemoveAt(ownIndex);
+            zomSpawner.GetComponent<ZombieSpawn>().curAmountZombie.RemoveAt(ownindex);
+            CheckOwnIndex();
             Destroy(gameObject);
+        }
+    }
+
+    public void CheckOwnIndex()
+    {
+        for (int i = 0; i < zomSpawner.GetComponent<ZombieSpawn>().curAmountZombie.Count; i++)
+        {
+            if(gameObject == zomSpawner.GetComponent<ZombieSpawn>().curAmountZombie[i])
+            {
+                ownindex = i;
+                break;
+            }
         }
     }
 }

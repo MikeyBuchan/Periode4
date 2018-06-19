@@ -7,9 +7,6 @@ public class Shop : MonoBehaviour
     public List<WeaponBase> shopWeaponHolder;
     public GameObject manager;
 
-    PlayerController player;
-    WeaponBase weaponBase;
-
     void Start()
     {
         manager = GameObject.FindWithTag("Manager");
@@ -17,34 +14,18 @@ public class Shop : MonoBehaviour
 
     void Update()
     {
-        ExitShop();
-    }
-    
-    public void HandGunEquip()
-    {
-        if (player.money >= weaponBase.ownValue)
-        {
-
-        }
+        
     }
     
     public void ExitShop()
     {
-        if(manager.GetComponent<UI>().shopPanel == true && Input.GetButtonDown("Interact") == true)
-        {
-            Debug.Log("CloseShop");
-            
-            manager.GetComponent<UI>().CloseShopText.SetActive(false);
-            manager.GetComponent<UI>().openShopText.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool = false;
 
-            manager.GetComponent<UI>().openShopPanel.SetActive(false);
-            manager.GetComponent<UI>().shopPanel.SetActive(false);
+        manager.GetComponent<UI>().CloseShopText.SetActive(false);
+        manager.GetComponent<UI>().shopPanel.SetActive(false);
 
-            manager.GetComponentInChildren<UI>().enabled = true;
-            player.moveSpeed = player.moveSpeedBaseValue;
-            GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        Debug.Log("Shop is closed");
     }
 }

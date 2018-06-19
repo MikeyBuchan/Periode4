@@ -20,23 +20,23 @@ public class MobSpawner : MonoBehaviour
     void Update()
     {
         SpawnZombie();
+
+        if (curAmountZombie == null)
+        {
+            Debug.Log("New Wave");
+            StartNewWave();
+        }
     }
 
     void CheckWave()
     {
-        if(curSpawned <= spawnAmount)
+        if(curSpawned < spawnAmount)
         {
             maySpawn = true;
 
             if (curAmountZombie.Count == spawnAmount)
             {
                 StopCoroutine(Spawner());
-
-                if (curAmountZombie == null)
-                {
-                    StartNewWave();
-                }
-
             }
         }
 
