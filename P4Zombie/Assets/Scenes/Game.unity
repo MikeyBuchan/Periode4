@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 124924389}
   - component: {fileID: 124924391}
   - component: {fileID: 124924388}
+  - component: {fileID: 124924392}
   m_Layer: 5
   m_Name: ShotGun
   m_TagString: Untagged
@@ -321,7 +322,7 @@ RectTransform:
   m_Children:
   - {fileID: 1716409030}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -426,7 +427,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 2068609351}
   weaponGameobject: {fileID: 100004, guid: c8852c6a4082ebd4f954de11bafbb88b, type: 3}
-  value: 0
+  value: 15
+  worthBox: {fileID: 1461497224}
+  displayPrice: 
+--- !u!114 &124924392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124924386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 124924391}
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &160775902
 Prefab:
   m_ObjectHideFlags: 0
@@ -1020,7 +1053,9 @@ GameObject:
   - component: {fileID: 324902826}
   - component: {fileID: 324902829}
   - component: {fileID: 324902828}
+  - component: {fileID: 324902831}
   - component: {fileID: 324902827}
+  - component: {fileID: 324902830}
   m_Layer: 5
   m_Name: MP5
   m_TagString: Untagged
@@ -1040,7 +1075,7 @@ RectTransform:
   m_Children:
   - {fileID: 1668569734}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1121,6 +1156,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 324902825}
+--- !u!114 &324902830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324902825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 324902831}
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &324902831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324902825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9635eb9efabdf4fac438c4479da4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 2068609351}
+  weaponGameobject: {fileID: 0}
+  value: 30
+  worthBox: {fileID: 1461497224}
+  displayPrice: 
 --- !u!1001 &355864143
 Prefab:
   m_ObjectHideFlags: 0
@@ -1239,6 +1320,7 @@ GameObject:
   - component: {fileID: 379975021}
   - component: {fileID: 379975023}
   - component: {fileID: 379975020}
+  - component: {fileID: 379975024}
   m_Layer: 5
   m_Name: Handgun
   m_TagString: Untagged
@@ -1258,7 +1340,7 @@ RectTransform:
   m_Children:
   - {fileID: 1526776351}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1363,7 +1445,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 2068609351}
   weaponGameobject: {fileID: 463885249}
-  value: 2
+  value: 5
+  worthBox: {fileID: 1461497224}
+  displayPrice: 
+--- !u!114 &379975024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379975018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 379975023}
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &391640877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,7 +1720,9 @@ GameObject:
   - component: {fileID: 442474234}
   - component: {fileID: 442474237}
   - component: {fileID: 442474236}
+  - component: {fileID: 442474239}
   - component: {fileID: 442474235}
+  - component: {fileID: 442474238}
   m_Layer: 5
   m_Name: LongRange Shotgun
   m_TagString: Untagged
@@ -1626,7 +1742,7 @@ RectTransform:
   m_Children:
   - {fileID: 1694557480}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1707,6 +1823,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442474233}
+--- !u!114 &442474238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442474233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 442474239}
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &442474239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442474233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9635eb9efabdf4fac438c4479da4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 2068609351}
+  weaponGameobject: {fileID: 0}
+  value: 20
+  worthBox: {fileID: 1461497224}
+  displayPrice: 
 --- !u!1001 &447168901
 Prefab:
   m_ObjectHideFlags: 0
@@ -1768,7 +1930,9 @@ GameObject:
   - component: {fileID: 457884753}
   - component: {fileID: 457884756}
   - component: {fileID: 457884755}
+  - component: {fileID: 457884758}
   - component: {fileID: 457884754}
+  - component: {fileID: 457884757}
   m_Layer: 5
   m_Name: Mosberg(Semi Shot)
   m_TagString: Untagged
@@ -1788,7 +1952,7 @@ RectTransform:
   m_Children:
   - {fileID: 2105812304}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1869,6 +2033,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457884752}
+--- !u!114 &457884757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457884752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 457884758}
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &457884758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457884752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9635eb9efabdf4fac438c4479da4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 2068609351}
+  weaponGameobject: {fileID: 0}
+  value: 25
+  worthBox: {fileID: 1461497224}
+  displayPrice: 
 --- !u!1 &463885249 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: 088c70b4ec9673c41a5fab51269d38db, type: 3}
@@ -2012,7 +2222,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1318055867}
     m_Modifications:
     - target: {fileID: 4512075842143342, guid: b092f381d5998a6499998e6bc6f4dd03, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2044,7 +2254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4512075842143342, guid: b092f381d5998a6499998e6bc6f4dd03, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 4512075842143342, guid: b092f381d5998a6499998e6bc6f4dd03, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2057,6 +2267,14 @@ Prefab:
     - target: {fileID: 1491640785255022, guid: b092f381d5998a6499998e6bc6f4dd03, type: 2}
       propertyPath: m_Name
       value: Window (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512075842143342, guid: b092f381d5998a6499998e6bc6f4dd03, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512075842143342, guid: b092f381d5998a6499998e6bc6f4dd03, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b092f381d5998a6499998e6bc6f4dd03, type: 2}
@@ -2071,7 +2289,9 @@ GameObject:
   - component: {fileID: 533709389}
   - component: {fileID: 533709392}
   - component: {fileID: 533709391}
+  - component: {fileID: 533709393}
   - component: {fileID: 533709390}
+  - component: {fileID: 533709394}
   m_Layer: 5
   m_Name: Eagel
   m_TagString: Untagged
@@ -2091,7 +2311,7 @@ RectTransform:
   m_Children:
   - {fileID: 848952321}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2172,6 +2392,57 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533709388}
+--- !u!114 &533709393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533709388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9635eb9efabdf4fac438c4479da4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 2068609351}
+  weaponGameobject: {fileID: 0}
+  value: 10
+  worthBox: {fileID: 1461497224}
+  displayPrice: 
+--- !u!114 &533709394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533709388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 533709393}
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!4 &545232007 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4512075842143342, guid: b092f381d5998a6499998e6bc6f4dd03,
+    type: 2}
+  m_PrefabInternal: {fileID: 495893883}
 --- !u!1001 &547090476
 Prefab:
   m_ObjectHideFlags: 0
@@ -2346,7 +2617,9 @@ GameObject:
   - component: {fileID: 618738509}
   - component: {fileID: 618738512}
   - component: {fileID: 618738511}
+  - component: {fileID: 618738514}
   - component: {fileID: 618738510}
+  - component: {fileID: 618738513}
   m_Layer: 5
   m_Name: LightMachine
   m_TagString: Untagged
@@ -2366,7 +2639,7 @@ RectTransform:
   m_Children:
   - {fileID: 391640878}
   m_Father: {fileID: 1699432207}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2447,6 +2720,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 618738508}
+--- !u!114 &618738513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618738508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 618738514}
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &618738514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618738508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9635eb9efabdf4fac438c4479da4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 2068609351}
+  weaponGameobject: {fileID: 0}
+  value: 35
+  worthBox: {fileID: 1461497224}
+  displayPrice: 
 --- !u!1001 &687001262
 Prefab:
   m_ObjectHideFlags: 0
@@ -4083,6 +4402,7 @@ Transform:
   - {fileID: 297948877}
   - {fileID: 547090477}
   - {fileID: 721333147}
+  - {fileID: 545232007}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4296,6 +4616,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1461497224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1461497225}
+  - component: {fileID: 1461497227}
+  - component: {fileID: 1461497226}
+  m_Layer: 5
+  m_Name: WorthBoxHandgun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1461497225
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1461497224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1699432207}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 75.09}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1461497226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1461497224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 66
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '0
+
+'
+--- !u!222 &1461497227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1461497224}
 --- !u!1001 &1485124910
 Prefab:
   m_ObjectHideFlags: 0
@@ -5233,6 +5629,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1461497225}
   - {fileID: 379975019}
   - {fileID: 533709389}
   - {fileID: 124924387}
@@ -5753,6 +6150,10 @@ Prefab:
     - target: {fileID: 100000, guid: e8ae852f49aa9954d8db4046375a7050, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e8ae852f49aa9954d8db4046375a7050, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8ae852f49aa9954d8db4046375a7050, type: 3}

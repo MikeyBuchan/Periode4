@@ -6,7 +6,6 @@ public class Shop : MonoBehaviour
 {
     public List<WeaponBase> shopWeaponHolder;
     public GameObject manager;
-
     PlayerController player;
     WeaponBase weaponBase;
 
