@@ -31,8 +31,9 @@ public class PlayerController : MonoBehaviour
     public int hitShopRange;
     public RaycastHit hitShop;
     public List<GameObject> Weapons = new List<GameObject>();
-    
+
     [Header("Rest")]
+    public int playerHealth;
     public int money;
     float timeSinceStaminaUse;
     public GameObject manager;
@@ -77,6 +78,11 @@ public class PlayerController : MonoBehaviour
         }
 
         OpenShop();
+
+        if (playerHealth == 0 )
+        {
+            Debug.Log("gameOver");
+        }
 	}
 
     private void FixedUpdate()
