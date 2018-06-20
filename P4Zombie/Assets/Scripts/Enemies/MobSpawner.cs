@@ -21,11 +21,11 @@ public class MobSpawner : MonoBehaviour
     {
         SpawnZombie();
 
-        if (curAmountZombie == null)
+        /*if (curAmountZombie.Count == 0)
         {
             Debug.Log("New Wave");
             StartNewWave();
-        }
+        }*/
     }
 
     void CheckWave()
@@ -42,10 +42,11 @@ public class MobSpawner : MonoBehaviour
 
     }
 
-    void StartNewWave()
+    public virtual void StartNewWave()
     {
         curSpawned = 0;
-        spawnAmount *= 2;
+        spawnAmount += 5;
+        maySpawn = true;
         SpawnZombie();
     }
 
