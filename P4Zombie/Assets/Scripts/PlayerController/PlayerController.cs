@@ -78,6 +78,11 @@ public class PlayerController : MonoBehaviour
         }
 
         OpenShop();
+
+        if (playerHealth == 0 )
+        {
+            Debug.Log("gameOver");
+        }
 	}
 
     private void FixedUpdate()

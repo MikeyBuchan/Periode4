@@ -8,12 +8,13 @@ public class ZombieScript : MonoBehaviour
     public int currency;
     int ownindex;
 
-    public float targetPosition;
     public Transform targetTransform;
     public float targetDistance;
 
     public float attackRange;
     public int damage;
+    public bool canDoDammage;
+    public float waitTimeForDamage;
 
     GameObject zomSpawner;
 
@@ -21,7 +22,7 @@ public class ZombieScript : MonoBehaviour
     {
         zomSpawner = GameObject.FindWithTag("ZomSpawner");
         targetTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        
+        canDoDammage = true;
     }
 
 
@@ -66,7 +67,19 @@ public class ZombieScript : MonoBehaviour
 
     public void DoDamage()
     {
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerHealth -= damage;
+        if (canDoDammage == true)
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerHealth -= damage;
+            canDoDammage = false;
+            StartCoroutine(DoDamageTimer());
+        }
         Debug.Log(GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerHealth);
+
+    }
+
+    IEnumerator DoDamageTimer()
+    {
+        yield return new WaitForSeconds(waitTimeForDamage);
+        canDoDammage = true;
     }
 }
