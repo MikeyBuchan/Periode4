@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114424435262996854}
   - component: {fileID: 114886667872786220}
   - component: {fileID: 195225930874897150}
+  - component: {fileID: 114789889648114994}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombie
@@ -110,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e9cb95f86626b498fc49b9798c680a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
   currency: 10
   targetTransform: {fileID: 0}
   targetDistance: 0
@@ -118,6 +118,19 @@ MonoBehaviour:
   damage: 10
   canDoDammage: 0
   waitTimeForDamage: 1.5
+--- !u!114 &114789889648114994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1299023630427120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22718e8a36cecde4bab6365e08192244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownIndex: 0
+  mobHealth: 5
 --- !u!114 &114886667872786220
 MonoBehaviour:
   m_ObjectHideFlags: 1
