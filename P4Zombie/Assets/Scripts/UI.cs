@@ -7,13 +7,7 @@ public class UI : MonoBehaviour
 {
     public GameObject shopPanel;
     public GameObject openShopPanel;
-
-    public GameObject openShopText;
-    public GameObject CloseShopText;
-
-    public Button button1;
-    public Button button2;
-    public Button button3;
+    public GameObject closeShopPanel;
 
 	void Start ()
     {
@@ -21,9 +15,7 @@ public class UI : MonoBehaviour
 
         shopPanel.SetActive(false);
         openShopPanel.SetActive(false);
-
-        openShopText.SetActive(false);
-        CloseShopText.SetActive(false);
+        closeShopPanel.SetActive(false);
 
 	}
 

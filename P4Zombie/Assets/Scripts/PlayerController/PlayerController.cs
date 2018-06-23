@@ -76,8 +76,9 @@ public class PlayerController : MonoBehaviour
 
         OpenShop();
 
-        if (shopOpenBool == false && Input.GetButtonDown("Back"))
+        if (shopOpenBool == true && Input.GetButtonDown("Back"))
         {
+            Debug.Log("CloseShop is called");
             GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
         }
     }
@@ -139,22 +140,21 @@ public class PlayerController : MonoBehaviour
                 if(shopOpenBool == false)
                 {
                     manager.GetComponent<UI>().openShopPanel.SetActive(true);
-                    manager.GetComponent<UI>().openShopText.SetActive(true);
-                    
                 }
 
                 if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
                 {
                     Debug.Log("shop is opend");
-                    manager.GetComponent<UI>().openShopText.SetActive(false);
+                    manager.GetComponent<UI>().openShopPanel.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
-                    manager.GetComponent<UI>().CloseShopText.SetActive(true);
+                    manager.GetComponent<UI>().closeShopPanel.SetActive(true);
 
                     gameObject.GetComponentInChildren<LookAround>().enabled = false;
                     moveSpeed = 0;
                     Cursor.lockState = CursorLockMode.None;
 
-                    shopOpenBool = false;
+                    shopOpenBool = true;
+                    Debug.Log(shopOpenBool);
                 }
             }
         }

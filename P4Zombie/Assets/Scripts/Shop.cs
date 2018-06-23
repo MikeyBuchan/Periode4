@@ -19,13 +19,13 @@ public class Shop : MonoBehaviour
     
     public void ExitShop()
     {
-        if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool == false)
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool == true)
         {
             GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = true;
-            GameObject.FindWithTag("Player").GetComponent<PlayerController>().moveSpeed = moveSpeedBaseValue;
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().moveSpeed = GameObject.FindWithTag("Player").GetComponent<PlayerController>().moveSpeedBaseValue;
 
-            manager.GetComponent<UI>().CloseShopText.SetActive(false);
             manager.GetComponent<UI>().shopPanel.SetActive(false);
+            manager.GetComponent<UI>().closeShopPanel.SetActive(false);
 
             Cursor.lockState = CursorLockMode.Locked;
 
