@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
     public float moveSpeedBaseValue;
-    Vector3 movementVector;
     float moveSpeedReset;
+    Vector3 movementVector;
 
     [Header("OpenShop")]
     public int hitShopRange;
@@ -42,10 +42,8 @@ public class PlayerController : MonoBehaviour
     {
         stamina = maxStamina;
         moveSpeedReset = moveSpeed;
-        moveSpeedBaseValue = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
-        
     }
 
     void Update ()
@@ -77,7 +75,12 @@ public class PlayerController : MonoBehaviour
         }
 
         OpenShop();
-	}
+
+        if (shopOpenBool == false && Input.GetButtonDown("Back"))
+        {
+            GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -143,17 +146,15 @@ public class PlayerController : MonoBehaviour
                 if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
                 {
                     Debug.Log("shop is opend");
-
-                    shopOpenBool = true;
-
                     manager.GetComponent<UI>().openShopText.SetActive(false);
                     manager.GetComponent<UI>().shopPanel.SetActive(true);
                     manager.GetComponent<UI>().CloseShopText.SetActive(true);
-                    
+
                     gameObject.GetComponentInChildren<LookAround>().enabled = false;
                     moveSpeed = 0;
                     Cursor.lockState = CursorLockMode.None;
 
+                    shopOpenBool = false;
                 }
             }
         }
@@ -166,10 +167,7 @@ public class PlayerController : MonoBehaviour
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
 
-        /*if (shopOpenBool == true && Input.GetButtonDown("Interact") == true)
-        {
-            GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
-        }*/
+
 
     }
 }

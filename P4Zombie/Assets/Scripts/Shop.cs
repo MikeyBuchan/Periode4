@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public List<WeaponBase> shopWeaponHolder;
-    public GameObject manager;
+    GameObject manager;
 
     void Start()
     {
@@ -19,13 +19,17 @@ public class Shop : MonoBehaviour
     
     public void ExitShop()
     {
-        GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool = false;
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool == false)
+        {
+            GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = true;
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().moveSpeed = moveSpeedBaseValue;
 
-        manager.GetComponent<UI>().CloseShopText.SetActive(false);
-        manager.GetComponent<UI>().shopPanel.SetActive(false);
+            manager.GetComponent<UI>().CloseShopText.SetActive(false);
+            manager.GetComponent<UI>().shopPanel.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
 
-        Debug.Log("Shop is closed");
+            Debug.Log("Shop is closed");
+        }
     }
 }
