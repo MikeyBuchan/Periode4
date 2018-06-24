@@ -30,13 +30,13 @@ public class PlayerController : MonoBehaviour
     [Header("OpenShop")]
     public int hitShopRange;
     public RaycastHit hitShop;
-    public List<GameObject> Weapons = new List<GameObject>();
 
     [Header("Rest")]
     public int money;
     float timeSinceStaminaUse;
     public GameObject manager;
     public bool shopOpenBool = false;
+    public List<GameObject> Weapons = new List<GameObject>();
 
     private void Start()
     {
