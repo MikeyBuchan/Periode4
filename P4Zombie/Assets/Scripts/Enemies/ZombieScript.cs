@@ -6,7 +6,7 @@ public class ZombieScript : MonoBehaviour
 {
     public int currency;
 
-    public Transform targetTransform;
+    Transform targetTransform;
     public float targetDistance;
 
     public float attackRange;
