@@ -12,16 +12,13 @@ public class WeaponAddScript : MonoBehaviour {
 
     public void Weapon()
     {
-        if (playerScript.Weapons.Count < 2)
+        if (playerScript.Weapons.Count < 2 & playerScript.money >= value)
         {
-            if (playerScript.money >= value)
-            {
                 {
                     Debug.Log("IT DOES SOMETHING");
                     playerScript.Weapons.Add(weaponGameobject);
                     playerScript.money -= value;
                 }
-            }
         }
     }
 
