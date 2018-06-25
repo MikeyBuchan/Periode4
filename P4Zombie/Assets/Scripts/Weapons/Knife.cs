@@ -22,7 +22,7 @@ public class Knife : MonoBehaviour
     void MeleeAttack()
     {
         GameObject.FindWithTag("Player").GetComponent<PlayerController>().stamina -= staminaDrain;
-        Debug.Log("hdhhdhdhd");
+
         if (Physics.Raycast(GameObject.FindWithTag("MainCamera").GetComponent<Transform>().position, GameObject.FindWithTag("MainCamera").GetComponent<Transform>().forward, out meleeHit, range))
         {
             if (meleeHit.transform.tag == "Zombie")
@@ -35,8 +35,8 @@ public class Knife : MonoBehaviour
                     Debug.Log("cur ++");
                 }
             }
+            Debug.DrawRay(transform.position, transform.forward * range, Color.green);
         }
-        Debug.DrawRay(transform.position, transform.forward * range, Color.green);
     }
 
 
