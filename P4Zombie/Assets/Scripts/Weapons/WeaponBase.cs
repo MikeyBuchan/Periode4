@@ -49,7 +49,6 @@ public class WeaponBase : MonoBehaviour
         {
             if(hit.transform.tag == "Zombie")
             {
-                Debug.Log("hit");
                 hit.transform.GetComponent<ZombieHealth>().mobHealth -= damage;
                 if(hit.transform.GetComponent<ZombieHealth>().mobHealth <= 0)
                 {
