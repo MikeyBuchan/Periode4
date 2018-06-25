@@ -133,9 +133,8 @@ public class PlayerController : MonoBehaviour
 
     public void OpenShop()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange))
+        if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) & hitShop.transform.tag == ("Shop"))
         {
-            if (hitShop.transform.tag == ("Shop"))
             {
                 if(shopOpenBool == false)
                 {
