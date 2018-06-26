@@ -14,11 +14,8 @@ public class ZombieScript : MonoBehaviour
     public bool canDoDammage;
     public float waitTimeForDamage;
 
-    GameObject zomSpawner;
-
     void Start()
     {
-        zomSpawner = GameObject.FindWithTag("ZomSpawner");
         targetTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
         canDoDammage = true;
     }

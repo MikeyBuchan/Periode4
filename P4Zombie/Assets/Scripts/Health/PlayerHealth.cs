@@ -13,6 +13,7 @@ public class PlayerHealth : HealthBase
             Debug.Log("gameOver");
             GameObject.FindWithTag("Manager").GetComponent<UI>().gameOverPanel.SetActive(true);
             GameObject.FindWithTag("Manager").GetComponent<UI>().gameOverCamera.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
             Destroy(gameObject);
         }
     }

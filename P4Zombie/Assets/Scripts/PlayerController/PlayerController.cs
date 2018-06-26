@@ -133,30 +133,29 @@ public class PlayerController : MonoBehaviour
 
     public void OpenShop()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange))
+        if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Shop"))
         {
-            if (hitShop.transform.tag == ("Shop"))
+
+            if(shopOpenBool == false)
             {
-                if(shopOpenBool == false)
-                {
-                    manager.GetComponent<UI>().openShopPanel.SetActive(true);
-                }
-
-                if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
-                {
-                    Debug.Log("shop is opend");
-                    manager.GetComponent<UI>().openShopPanel.SetActive(false);
-                    manager.GetComponent<UI>().shopPanel.SetActive(true);
-                    manager.GetComponent<UI>().closeShopPanel.SetActive(true);
-
-                    gameObject.GetComponentInChildren<LookAround>().enabled = false;
-                    moveSpeed = 0;
-                    Cursor.lockState = CursorLockMode.None;
-
-                    shopOpenBool = true;
-                    Debug.Log(shopOpenBool);
-                }
+                manager.GetComponent<UI>().openShopPanel.SetActive(true);
             }
+
+            if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
+            {
+                Debug.Log("shop is opend");
+                manager.GetComponent<UI>().openShopPanel.SetActive(false);
+                manager.GetComponent<UI>().shopPanel.SetActive(true);
+                manager.GetComponent<UI>().closeShopPanel.SetActive(true);
+
+                gameObject.GetComponentInChildren<LookAround>().enabled = false;
+                moveSpeed = 0;
+                Cursor.lockState = CursorLockMode.None;
+
+                shopOpenBool = true;
+                Debug.Log(shopOpenBool);
+            }
+
         }
         else
         {
