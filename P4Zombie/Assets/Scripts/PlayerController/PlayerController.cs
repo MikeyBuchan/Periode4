@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
     public int hitShopRange;
     public RaycastHit hitShop;
 
+    [Header("Generator")]
+    public int hitGeneratorRange;
+    public RaycastHit hitGen;
+
     [Header("Rest")]
     public int money;
     float timeSinceStaminaUse;
@@ -135,7 +139,6 @@ public class PlayerController : MonoBehaviour
     {
         if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Shop"))
         {
-
             if(shopOpenBool == false)
             {
                 manager.GetComponent<UI>().openShopPanel.SetActive(true);
@@ -165,8 +168,11 @@ public class PlayerController : MonoBehaviour
             shopOpenBool = false;    
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
+    }
 
-
+    public void GeneratorSwitch()
+    {
 
     }
+
 }
