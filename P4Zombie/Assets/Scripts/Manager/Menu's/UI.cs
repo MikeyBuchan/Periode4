@@ -13,6 +13,9 @@ public class UI : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject gameOverCamera;
 
+    public GameObject GeneratorNeedWirePanel;
+    public GameObject GeneratorGotWirePanel;
+
 	void Start ()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -24,6 +27,8 @@ public class UI : MonoBehaviour
         gameOverPanel.SetActive(false);
         gameOverCamera.SetActive(false);
 
+        GeneratorNeedWirePanel.SetActive(false);
+        GeneratorGotWirePanel.SetActive(false);
 	}
 
     public void Restart()

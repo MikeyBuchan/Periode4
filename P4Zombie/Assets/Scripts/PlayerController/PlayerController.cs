@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,16 +32,13 @@ public class PlayerController : MonoBehaviour
     public int hitShopRange;
     public RaycastHit hitShop;
 
-    [Header("Generator")]
-    public int hitGeneratorRange;
-    public RaycastHit hitGen;
-
     [Header("Rest")]
     public int money;
-    float timeSinceStaminaUse;
-    public GameObject manager;
+    public Sprite WireHolder;
     public bool shopOpenBool = false;
     public List<GameObject> Weapons = new List<GameObject>();
+    GameObject manager;
+    float timeSinceStaminaUse;
 
     private void Start()
     {
@@ -48,6 +46,7 @@ public class PlayerController : MonoBehaviour
         moveSpeedReset = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
+        WireHolder = GameObject.Find("WireHolder").GetComponent<Image>().sprite;
     }
 
     void Update ()
@@ -79,6 +78,7 @@ public class PlayerController : MonoBehaviour
         }
 
         OpenShop();
+        GeneratorSwitch();
 
         if (shopOpenBool == true && Input.GetButtonDown("Back"))
         {
@@ -172,7 +172,24 @@ public class PlayerController : MonoBehaviour
 
     public void GeneratorSwitch()
     {
-
+        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Generator"))
+        {
+            if (WireHolder != null)
+            {
+                Debug.Log("Got Wire");
+                GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorGotWirePanel.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Need Wire");
+                GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorNeedWirePanel.SetActive(true);
+            }
+        }
+        else
+        {
+            GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
+            GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorNeedWirePanel.SetActive(false);
+        }
     }
 
 }

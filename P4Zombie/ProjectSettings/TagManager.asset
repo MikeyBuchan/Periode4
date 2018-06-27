@@ -9,6 +9,8 @@ TagManager:
   - Shop
   - Manager
   - ZomSpawner
+  - Generator
+  - Canvas
   layers:
   - Default
   - TransparentFX
