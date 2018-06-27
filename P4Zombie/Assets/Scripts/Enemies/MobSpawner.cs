@@ -7,25 +7,20 @@ public class MobSpawner : MonoBehaviour
     public GameObject zombie;
     public float spawTime;
     public bool maySpawn;
-
-    public List<GameObject> curAmountZombie;
     public int spawnAmount;
+    public int spawAmountForNewWave;
     public int curSpawned;
+    GameObject man;
 
     void Start()
     {
         maySpawn = true;
+        man = GameObject.FindWithTag("Manager");
     }
 
     void Update()
     {
         SpawnZombie();
-
-        /*if (curAmountZombie.Count == 0)
-        {
-            Debug.Log("New Wave");
-            StartNewWave();
-        }*/
     }
 
     void CheckWave()
@@ -34,7 +29,7 @@ public class MobSpawner : MonoBehaviour
         {
             maySpawn = true;
 
-            if (curAmountZombie.Count == spawnAmount)
+            if (man.GetComponent<Manager>().curAmountZombie.Count == spawnAmount)
             {
                 StopCoroutine(Spawner());
             }
@@ -45,7 +40,8 @@ public class MobSpawner : MonoBehaviour
     public virtual void StartNewWave()
     {
         curSpawned = 0;
-        spawnAmount += 5;
+        spawnAmount += spawAmountForNewWave;
+        man.GetComponent<Manager>().waveCounter++;
         maySpawn = true;
         SpawnZombie();
     }
@@ -62,7 +58,7 @@ public class MobSpawner : MonoBehaviour
     {
         maySpawn = false;
         GameObject g = Instantiate(zombie, transform.position, transform.rotation);
-        curAmountZombie.Add(g);
+        man.GetComponent<Manager>().curAmountZombie.Add(g);
         yield return new WaitForSeconds(spawTime);
         curSpawned++;
         CheckWave();
