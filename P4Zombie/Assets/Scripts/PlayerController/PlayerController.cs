@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     GameObject manager;
     float timeSinceStaminaUse;
 
-    private void Start()
+    void Start()
     {
         stamina = maxStamina;
         moveSpeedReset = moveSpeed;
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         timeSinceStaminaUse = 0;
     }
 
-    private void Move()
+    void Move()
     {
         movementVector.x = Input.GetAxis("Horizontal");
         movementVector.z = Input.GetAxis("Vertical");
@@ -177,18 +177,23 @@ public class PlayerController : MonoBehaviour
             if (WireHolder != null)
             {
                 Debug.Log("Got Wire");
-                GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorGotWirePanel.SetActive(true);
+                manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(true);
+                if (manager.GetComponent<UI>().GeneratorGotWirePanel == true && Input.GetButton("Interact") == true)
+                {
+                    GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
+                    WireHolder = null;
+                }
             }
             else
             {
                 Debug.Log("Need Wire");
-                GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorNeedWirePanel.SetActive(true);
+                manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(true);
             }
         }
         else
         {
-            GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
-            GameObject.FindWithTag("Manager").GetComponent<UI>().GeneratorNeedWirePanel.SetActive(false);
+            manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
+            manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(false);
         }
     }
 

@@ -112,10 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currency: 10
-  targetTransform: {fileID: 0}
   targetDistance: 0
   attackRange: 1.7
-  damage: 10
+  damage: 5
+  addDamageForNewWave: 5
+  maxDamage: 45
   canDoDammage: 0
   waitTimeForDamage: 1.5
 --- !u!114 &114789889648114994

@@ -6,5 +6,5 @@ public class Manager : MonoBehaviour
 {
     public List<GameObject> curAmountZombie;
     public int waveCounter = 1;
-
+    public int spawAmountForNewWave;
 }

@@ -10,10 +10,7 @@ public class Generator : MonoBehaviour
     public GameObject spawnerZone4;
     public GameObject spawnerZone5;
 
-    public GameObject barricade1;
-    public GameObject barricade2;
-    public GameObject barricade3;
-    public GameObject barricade4;
+    public GameObject[] barricade;
 
     void Start()
     {
@@ -21,5 +18,17 @@ public class Generator : MonoBehaviour
         spawnerZone3.SetActive(false);
         spawnerZone4.SetActive(false);
         spawnerZone5.SetActive(false);
+    }
+
+    public void OpenNewArea()
+    {
+        for (int i = 0; i < barricade.Length; i++)
+        {
+            if (barricade[i].gameObject.activeSelf == true)
+            {
+                Debug.Log(i + "We zijn hier nu");
+                break;
+            }
+        }
     }
 }

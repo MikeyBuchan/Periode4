@@ -8,7 +8,6 @@ public class MobSpawner : MonoBehaviour
     public float spawTime;
     public bool maySpawn;
     public int spawnAmount;
-    public int spawAmountForNewWave;
     public int curSpawned;
     GameObject man;
 
@@ -40,8 +39,12 @@ public class MobSpawner : MonoBehaviour
     public virtual void StartNewWave()
     {
         curSpawned = 0;
-        spawnAmount += spawAmountForNewWave;
+        spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
         man.GetComponent<Manager>().waveCounter++;
+        if (GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage < GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().maxDamage)
+        {
+            GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage += GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().addDamageForNewWave;
+        }
         maySpawn = true;
         SpawnZombie();
     }
