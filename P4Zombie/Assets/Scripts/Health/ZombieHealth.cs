@@ -7,7 +7,8 @@ public class ZombieHealth : HealthBase
     GameObject zomSpawner;
     GameObject man;
     public int ownIndex;
-    public int mobHealth;
+    public int zombieHealth;
+    public int AddhealthForNewWave;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class ZombieHealth : HealthBase
 
     void Update ()
     {
-        if (mobHealth <= 0)
+        if (zombieHealth <= 0)
         {
             man.GetComponent<Manager>().curAmountZombie.RemoveAt(ownIndex);
             CheckOwnIndex();

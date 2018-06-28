@@ -131,7 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownIndex: 0
-  mobHealth: 5
+  zombieHealth: 5
+  AddhealthForNewWave: 5
 --- !u!114 &114886667872786220
 MonoBehaviour:
   m_ObjectHideFlags: 1

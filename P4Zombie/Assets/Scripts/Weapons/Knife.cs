@@ -27,12 +27,13 @@ public class Knife : MonoBehaviour
         {
             if (meleeHit.transform.tag == "Zombie")
             {
-                meleeHit.transform.GetComponent<ZombieHealth>().mobHealth -= damage;
+                meleeHit.transform.GetComponent<ZombieHealth>().zombieHealth -= damage;
+                Debug.Log(meleeHit.transform.GetComponent<ZombieHealth>().zombieHealth);
 
-                if (meleeHit.transform.GetComponent<ZombieHealth>().mobHealth <= 0)
+                if (meleeHit.transform.GetComponent<ZombieHealth>().zombieHealth <= 0)
                 {
                     GameObject.FindWithTag("Player").GetComponentInParent<PlayerController>().money += meleeHit.transform.GetComponent<ZombieScript>().currency;
-                    Debug.Log("cur ++");
+                    Debug.Log("cur knife ++");
                 }
             }
             Debug.DrawRay(transform.position, transform.forward * range, Color.green);

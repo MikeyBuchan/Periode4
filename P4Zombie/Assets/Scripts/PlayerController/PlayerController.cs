@@ -180,8 +180,8 @@ public class PlayerController : MonoBehaviour
                 manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(true);
                 if (manager.GetComponent<UI>().GeneratorGotWirePanel == true && Input.GetButton("Interact") == true)
                 {
+                    GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                     GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
-                    WireHolder = null;
                     manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
                 }
             }
