@@ -294,29 +294,13 @@ GameObject:
   - component: {fileID: 1332769265}
   - component: {fileID: 23421658}
   - component: {fileID: 23421657}
-  - component: {fileID: 23421656}
   m_Layer: 0
   m_Name: Twig_Fence (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 2
+  m_StaticEditorFlags: 8
   m_IsActive: 1
---- !u!208 &23421656
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 23421655}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.010000001, y: 0.001, z: 0.0050000004}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.010000001, y: 0, z: 0.0050000004}
-  m_TimeToStationary: 0.5
 --- !u!23 &23421657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3059,29 +3043,13 @@ GameObject:
   - component: {fileID: 375827095}
   - component: {fileID: 154727460}
   - component: {fileID: 154727459}
-  - component: {fileID: 154727458}
   m_Layer: 0
   m_Name: Twig_Fence (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 2
+  m_StaticEditorFlags: 8
   m_IsActive: 1
---- !u!208 &154727458
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 154727457}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.010000001, y: 0.001, z: 0.0050000004}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.010000001, y: 0, z: 0.0050000004}
-  m_TimeToStationary: 0.5
 --- !u!23 &154727459
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9371,8 +9339,7 @@ Prefab:
         type: 2}
       propertyPath: WireHolder
       value: 
-      objectReference: {fileID: 21300000, guid: 189cda5a5a68bcd4cb5060addb10772d,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
   m_IsPrefabParent: 0
@@ -40277,7 +40244,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4752106488171462, guid: 0a6d02657e7e1364bb7f71078f90fd1c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 251.8
+      value: 261.04
       objectReference: {fileID: 0}
     - target: {fileID: 4752106488171462, guid: 0a6d02657e7e1364bb7f71078f90fd1c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -40285,7 +40252,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4752106488171462, guid: 0a6d02657e7e1364bb7f71078f90fd1c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 192.97
+      value: 206.74
       objectReference: {fileID: 0}
     - target: {fileID: 4752106488171462, guid: 0a6d02657e7e1364bb7f71078f90fd1c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -40332,6 +40299,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1327096381609446, guid: 0a6d02657e7e1364bb7f71078f90fd1c, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a6d02657e7e1364bb7f71078f90fd1c, type: 2}
   m_IsPrefabParent: 0
@@ -43674,6 +43646,22 @@ Prefab:
     - target: {fileID: 4144117840153926, guid: 5be1aa4c3f3260244b861423e1788827, type: 2}
       propertyPath: m_RootOrder
       value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860527411374074, guid: 5be1aa4c3f3260244b861423e1788827, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433564690709396, guid: 5be1aa4c3f3260244b861423e1788827, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860527411374074, guid: 5be1aa4c3f3260244b861423e1788827, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433564690709396, guid: 5be1aa4c3f3260244b861423e1788827, type: 2}
+      propertyPath: m_NavMeshLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 208368425419307284, guid: 5be1aa4c3f3260244b861423e1788827, type: 2}

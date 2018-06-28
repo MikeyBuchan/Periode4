@@ -54,6 +54,5 @@ MonoBehaviour:
   zombie: {fileID: 1434266173895700, guid: 44ecb940fc9825d4b94981d93e50920a, type: 2}
   spawTime: 3
   maySpawn: 0
-  curAmountZombie: []
   spawnAmount: 0
   curSpawned: 0
