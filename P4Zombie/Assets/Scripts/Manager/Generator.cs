@@ -27,8 +27,18 @@ public class Generator : MonoBehaviour
         {
             if (barricade[i].gameObject.activeSelf == true)
             {
-                Debug.Log(i + "We zijn hier nu");
+                Debug.Log(i + "New Zone");
                 barricade[i].SetActive(false);
+                break;
+            }
+        }
+
+        for (int i = 0; i < spawners.Length; i++)
+        {
+            if (spawners[i].gameObject.activeSelf == false)
+            {
+                Debug.Log(i + "New Spawner");
+                spawners[i].SetActive(true);
                 break;
             }
         }

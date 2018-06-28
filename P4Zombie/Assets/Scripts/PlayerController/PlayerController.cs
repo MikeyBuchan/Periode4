@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
             shopOpenBool = false;    
         }
-        Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
+        //Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
     }
 
     public void GeneratorSwitch()
@@ -182,6 +182,7 @@ public class PlayerController : MonoBehaviour
                 {
                     GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
                     WireHolder = null;
+                    manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
                 }
             }
             else
