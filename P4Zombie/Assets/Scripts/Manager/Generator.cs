@@ -11,6 +11,7 @@ public class Generator : MonoBehaviour
     public GameObject spawnerZone5;
 
     public GameObject[] barricade;
+    public GameObject[] spawners;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class Generator : MonoBehaviour
             if (barricade[i].gameObject.activeSelf == true)
             {
                 Debug.Log(i + "We zijn hier nu");
+                barricade[i].SetActive(false);
                 break;
             }
         }
