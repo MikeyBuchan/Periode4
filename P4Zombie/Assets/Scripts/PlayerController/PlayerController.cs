@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         moveSpeedReset = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
-        WireHolder = GameObject.Find("WireHolder").GetComponent<Image>().sprite;
+        WireHolder = GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite;
     }
 
     void Update ()
