@@ -42,7 +42,7 @@ public class MobSpawner : MonoBehaviour
         spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
         man.GetComponent<Manager>().waveCounter++;
 
-        GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().zombieHealth += GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().AddhealthForNewWave;
+        GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().zombieHealth += GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().AddHealthForNewWave;
         if (GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage < GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().maxDamage)
         {
             GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage += GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().addDamageForNewWave;
