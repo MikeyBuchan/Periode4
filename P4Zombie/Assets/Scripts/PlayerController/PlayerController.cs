@@ -181,6 +181,7 @@ public class PlayerController : MonoBehaviour
                 if (manager.GetComponent<UI>().GeneratorGotWirePanel == true && Input.GetButton("Interact") == true)
                 {
                     GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
+                    WireHolder = null;
                     GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
                     manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
                 }

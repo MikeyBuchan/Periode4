@@ -15,10 +15,10 @@ public class Generator : MonoBehaviour
 
     void Start()
     {
-        spawnerZone2.SetActive(false);
+        /*spawnerZone2.SetActive(false);
         spawnerZone3.SetActive(false);
         spawnerZone4.SetActive(false);
-        spawnerZone5.SetActive(false);
+        spawnerZone5.SetActive(false);*/
     }
 
     public void OpenNewArea()
