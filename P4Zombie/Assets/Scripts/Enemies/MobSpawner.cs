@@ -63,8 +63,15 @@ public class MobSpawner : MonoBehaviour
     IEnumerator Spawner()
     {
         maySpawn = false;
-        GameObject g = Instantiate(zombie, transform.position, transform.rotation);
-        man.GetComponent<Manager>().curAmountZombie.Add(g);
+        for (int i = 0; i < GameObject.FindWithTag("Generator").GetComponent<Generator>().spawners.Length; i++)
+        {
+            if (GameObject.FindWithTag("Generator").GetComponent<Generator>().spawners[i] == true)
+            {
+                GameObject g = Instantiate(zombie, transform.position, transform.rotation);
+                man.GetComponent<Manager>().curAmountZombie.Add(g);
+                break;
+            }
+        }
         yield return new WaitForSeconds(spawTime);
         curSpawned++;
         CheckWave();
