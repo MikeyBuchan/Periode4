@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
             shopOpenBool = false;    
         }
-        //Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
+        Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
     }
 
     public void GeneratorSwitch()
