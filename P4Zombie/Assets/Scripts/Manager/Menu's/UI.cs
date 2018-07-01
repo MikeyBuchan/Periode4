@@ -16,6 +16,8 @@ public class UI : MonoBehaviour
     public GameObject GeneratorNeedWirePanel;
     public GameObject GeneratorGotWirePanel;
 
+    public GameObject VicPanel;
+
 	void Start ()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -29,6 +31,8 @@ public class UI : MonoBehaviour
 
         GeneratorNeedWirePanel.SetActive(false);
         GeneratorGotWirePanel.SetActive(false);
+
+        VicPanel.SetActive(false);
 	}
 
     public void Restart()
