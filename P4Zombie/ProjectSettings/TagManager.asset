@@ -9,6 +9,10 @@ TagManager:
   - Shop
   - Manager
   - ZomSpawner
+  - Generator
+  - Canvas
+  - WireTag
+  - EscapeCar
   layers:
   - Default
   - TransparentFX

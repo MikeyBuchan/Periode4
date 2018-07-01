@@ -49,8 +49,8 @@ public class WeaponBase : MonoBehaviour
         {
             if(hit.transform.tag == "Zombie")
             {
-                hit.transform.GetComponent<ZombieHealth>().mobHealth -= damage;
-                if(hit.transform.GetComponent<ZombieHealth>().mobHealth <= 0)
+                hit.transform.GetComponent<ZombieHealth>().zombieHealth -= damage;
+                if(hit.transform.GetComponent<ZombieHealth>().zombieHealth <= 0)
                 {
                     GameObject.FindWithTag("Player").GetComponentInParent<PlayerController>().money += hit.transform.GetComponent<ZombieScript>().currency;
                     Debug.Log("cur ++");

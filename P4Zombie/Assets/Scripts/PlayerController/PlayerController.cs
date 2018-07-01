@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,17 +34,19 @@ public class PlayerController : MonoBehaviour
 
     [Header("Rest")]
     public int money;
-    float timeSinceStaminaUse;
-    public GameObject manager;
+    public Sprite WireHolder;
     public bool shopOpenBool = false;
     public List<GameObject> Weapons = new List<GameObject>();
+    GameObject manager;
+    float timeSinceStaminaUse;
 
-    private void Start()
+    void Start()
     {
         stamina = maxStamina;
         moveSpeedReset = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
+        WireHolder = GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite;
     }
 
     void Update ()
@@ -75,6 +78,8 @@ public class PlayerController : MonoBehaviour
         }
 
         OpenShop();
+        GeneratorSwitch();
+        VictorySwitch();
 
         if (shopOpenBool == true && Input.GetButtonDown("Back"))
         {
@@ -124,18 +129,18 @@ public class PlayerController : MonoBehaviour
         timeSinceStaminaUse = 0;
     }
 
-    private void Move()
+    void Move()
     {
         movementVector.x = Input.GetAxis("Horizontal");
         movementVector.z = Input.GetAxis("Vertical");
         transform.Translate(movementVector * moveSpeed * Time.deltaTime);
     }
 
+    //Open things
     public void OpenShop()
     {
         if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Shop"))
         {
-
             if(shopOpenBool == false)
             {
                 manager.GetComponent<UI>().openShopPanel.SetActive(true);
@@ -154,6 +159,10 @@ public class PlayerController : MonoBehaviour
 
                 shopOpenBool = true;
                 Debug.Log(shopOpenBool);
+                if (Input.GetButton("Back") == true)
+                {
+                    GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
+                }
             }
 
         }
@@ -165,8 +174,59 @@ public class PlayerController : MonoBehaviour
             shopOpenBool = false;    
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
-
-
-
     }
+
+    public void GeneratorSwitch()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Generator"))
+        {
+            if (WireHolder != null)
+            {
+                Debug.Log("Got Wire");
+                manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(true);
+                if (manager.GetComponent<UI>().GeneratorGotWirePanel == true && Input.GetButton("Interact") == true)
+                {
+                    GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
+                    WireHolder = null;
+                    GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
+                    manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
+                }
+            }
+            else
+            {
+                Debug.Log("Need Wire");
+                manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(true);
+            }
+        }
+        else
+        {
+            manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
+            manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(false);
+        }
+    }
+
+    public void VictorySwitch()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("EscapeCar"))
+        {
+            if (WireHolder != null)
+            {
+                Debug.Log("Got Wire");
+                manager.GetComponent<UI>().VicPanel.SetActive(true);
+                if (manager.GetComponent<UI>().VicPanel == true && Input.GetButton("Interact") == true)
+                {
+                    GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
+                    WireHolder = null;
+                    manager.GetComponent<UI>().VicPanel.SetActive(false);
+                    Debug.Log("Victory");
+                }
+            }
+            else
+            {
+                Debug.Log("Need Wire");
+                manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(true);
+            }
+        }
+    }
+
 }

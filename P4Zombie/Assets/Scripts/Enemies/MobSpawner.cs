@@ -7,25 +7,19 @@ public class MobSpawner : MonoBehaviour
     public GameObject zombie;
     public float spawTime;
     public bool maySpawn;
-
-    public List<GameObject> curAmountZombie;
     public int spawnAmount;
     public int curSpawned;
+    GameObject man;
 
     void Start()
     {
         maySpawn = true;
+        man = GameObject.FindWithTag("Manager");
     }
 
     void Update()
     {
         SpawnZombie();
-
-        /*if (curAmountZombie.Count == 0)
-        {
-            Debug.Log("New Wave");
-            StartNewWave();
-        }*/
     }
 
     void CheckWave()
@@ -34,7 +28,7 @@ public class MobSpawner : MonoBehaviour
         {
             maySpawn = true;
 
-            if (curAmountZombie.Count == spawnAmount)
+            if (man.GetComponent<Manager>().curAmountZombie.Count == spawnAmount)
             {
                 StopCoroutine(Spawner());
             }
@@ -45,7 +39,15 @@ public class MobSpawner : MonoBehaviour
     public virtual void StartNewWave()
     {
         curSpawned = 0;
-        spawnAmount += 5;
+        spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
+        man.GetComponent<Manager>().waveCounter++;
+
+        GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().zombieHealth += GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().AddHealthForNewWave;
+        if (GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage < GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().maxDamage)
+        {
+            GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage += GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().addDamageForNewWave;
+        }
+
         maySpawn = true;
         SpawnZombie();
     }
@@ -61,8 +63,15 @@ public class MobSpawner : MonoBehaviour
     IEnumerator Spawner()
     {
         maySpawn = false;
-        GameObject g = Instantiate(zombie, transform.position, transform.rotation);
-        curAmountZombie.Add(g);
+        for (int i = 0; i < GameObject.FindWithTag("Generator").GetComponent<Generator>().spawners.Length; i++)
+        {
+            if (GameObject.FindWithTag("Generator").GetComponent<Generator>().spawners[i] == true)
+            {
+                GameObject g = Instantiate(zombie, transform.position, transform.rotation);
+                man.GetComponent<Manager>().curAmountZombie.Add(g);
+                break;
+            }
+        }
         yield return new WaitForSeconds(spawTime);
         curSpawned++;
         CheckWave();

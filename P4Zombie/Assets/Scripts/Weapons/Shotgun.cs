@@ -24,8 +24,8 @@ public class Shotgun : WeaponBase
                 if (hit.transform.tag == "Zombie")
                 {
                     Debug.Log("hit");
-                    hit.transform.GetComponent<ZombieHealth>().mobHealth -= damage;
-                    if (hit.transform.GetComponent<ZombieHealth>().mobHealth <= 0)
+                    hit.transform.GetComponent<ZombieHealth>().zombieHealth -= damage;
+                    if (hit.transform.GetComponent<ZombieHealth>().zombieHealth <= 0)
                     {
                         GameObject.FindWithTag("Player").GetComponentInParent<PlayerController>().money += hit.transform.GetComponent<ZombieScript>().currency;
                         Debug.Log("cur ++");
