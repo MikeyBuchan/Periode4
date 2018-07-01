@@ -12,6 +12,7 @@ TagManager:
   - Generator
   - Canvas
   - WireTag
+  - EscapeCar
   layers:
   - Default
   - TransparentFX
