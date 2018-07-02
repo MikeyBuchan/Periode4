@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     GameObject manager;
     float timeSinceStaminaUse;
 
+
     void Start()
     {
         stamina = maxStamina;
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
         manager = GameObject.FindWithTag("Manager");
         WireHolder = GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite;
+
     }
 
     void Update ()
@@ -140,7 +142,7 @@ public class PlayerController : MonoBehaviour
     //Open things
     public void OpenShop()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Shop"))
+        if(Physics.Raycast(transform.position,transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Shop"))
         {
             if(shopOpenBool == false)
             {
@@ -206,42 +208,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void VictorySwitch()
-    {
-        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("EscapeCar"))
-        {
-            if (WireHolder != null)
-            {
-                Debug.Log("Got Wire");
-                manager.GetComponent<UI>().vicPanel.SetActive(true);
-                if (manager.GetComponent<UI>().vicPanel == true && Input.GetButton("Interact") == true)
-                {
-                    GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
-                    WireHolder = null;
-                    manager.GetComponent<UI>().vicPanel.SetActive(false);
-                    Debug.Log("Victory");
-                }
-            }
-            else
-            {
-                Debug.Log("Need Wire");
-                manager.GetComponent<UI>().generatorNeedWirePanel.SetActive(true);
-            }
-        }
-    }
-
     public void PickUpAccu()
     {
         if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("EscapeAccu"))
         {
-            manager.GetComponent<UI>().accuPanel.SetActive(true);
             if (WireHolder == null)
             {
+                manager.GetComponent<UI>().accuPanel.SetActive(true);
                 if (manager.GetComponent<UI>().accuPanel == true && Input.GetButton("Interact") == true)
                 {
-                    //GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
-                    //WireHolder = null;
-                    GameObject.FindWithTag("Wireholder").GetComponent<Image>().sprite = manager.GetComponent<UI>().carAccu;
+                    GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = manager.GetComponent<UI>().carAccu;
+                    WireHolder = manager.GetComponent<UI>().carAccu;
                     manager.GetComponent<UI>().accuPanel.SetActive(false);
                 }
             }
@@ -249,6 +226,42 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Open New Area First");
             }
+        }
+    }
+
+    public void VictorySwitch()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("EscapeCar"))
+        {
+            if (WireHolder != null)
+            {
+                if (WireHolder == manager.GetComponent<UI>().carAccu)
+                {
+                    Debug.Log("Got Accu");
+                    manager.GetComponent<UI>().vicPanel.SetActive(true);
+                    manager.GetComponent<UI>().needAccuPanel.SetActive(false);
+                    if (manager.GetComponent<UI>().vicPanel == true && Input.GetButton("Interact") == true)
+                    {
+                        GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
+                        WireHolder = null;
+                        manager.GetComponent<UI>().vicPanel.SetActive(false);
+                        Debug.Log("Victory");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Need accu");
+                    manager.GetComponent<UI>().needAccuPanel.SetActive(true);
+                }
+            }
+            else
+            {
+                manager.GetComponent<UI>().needAccuPanel.SetActive(true);
+            }
+        }
+        else
+        {
+            manager.GetComponent<UI>().needAccuPanel.SetActive(false);
         }
     }
 }

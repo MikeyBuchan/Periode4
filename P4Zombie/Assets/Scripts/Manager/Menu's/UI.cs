@@ -20,6 +20,7 @@ public class UI : MonoBehaviour
 
     public GameObject vicPanel;
     public GameObject accuPanel;
+    public GameObject needAccuPanel;
 
 	void Start ()
     {
@@ -37,6 +38,7 @@ public class UI : MonoBehaviour
 
         vicPanel.SetActive(false);
         accuPanel.SetActive(false);
+        needAccuPanel.SetActive(false);
 	}
 
     public void Restart()
