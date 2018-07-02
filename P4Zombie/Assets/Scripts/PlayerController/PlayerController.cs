@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             moveSpeed = moveSpeedReset;
         }
 
-        //cantSprint is false while walking backwards
+        //canSprint is false while walking backwards
         if(Input.GetAxis("Vertical") < 0)
         {
             canSprint = false;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour {
 
-    int activeIndex;
+    public int activeIndex;
     GameObject player;
 
 	void Start ()

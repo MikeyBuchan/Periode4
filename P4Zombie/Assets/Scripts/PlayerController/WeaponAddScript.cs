@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponAddScript : MonoBehaviour {
+public class WeaponAddScript : MonoBehaviour
+{
     public PlayerController playerScript;
     public GameObject weaponGameobject;
     public int value;
@@ -14,17 +15,17 @@ public class WeaponAddScript : MonoBehaviour {
     {
         if (playerScript.Weapons.Count < 2 & playerScript.money >= value)
         {
-                {
-                    Debug.Log("IT DOES SOMETHING");
-                    playerScript.Weapons.Add(weaponGameobject);
-                    playerScript.money -= value;
-                }
+            playerScript.Weapons.Add(weaponGameobject);
+            playerScript.money -= value;
+        }
+        else
+        {
+            playerScript.Weapons[playerScript.gameObject.GetComponent<WeaponSwitch>().activeIndex] = weaponGameobject;
         }
     }
 
     public void OnMouseOver()
     {
-        Debug.Log("it works");
         displayPrice = "" + value;
         worthBox.GetComponent<Text>().text = displayPrice;
     }

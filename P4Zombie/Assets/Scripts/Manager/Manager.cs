@@ -14,7 +14,6 @@ public class Manager : MonoBehaviour
         {
             if (GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().spawnerActive == true)
             {
-                Debug.Log("Ik sta aan blblblblblb");
                 GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().SpawnZombie();
                 break;
             }
