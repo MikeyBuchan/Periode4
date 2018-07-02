@@ -17,8 +17,12 @@ public class WeaponBase : MonoBehaviour
     public RaycastHit hit;
     public int ownValue;
 
+    public ParticleSystem mf;
+
     private void Start()
     {
+        Instantiate(mf, transform.position + Vector3.forward, transform.rotation);
+
         bulletInClip = clipSize;
     }
 
@@ -45,6 +49,8 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void Shoot()
     {
+        mf.Play();
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
             if(hit.transform.tag == "Zombie")

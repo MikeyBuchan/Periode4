@@ -10,7 +10,9 @@ public class Shotgun : WeaponBase
     public float spread;
 
     public override void Shoot()
-    {                 
+    {
+        mf.Play();
+
         for (int i = 0; i < pellets; i++)
         {
             v.x = Random.Range(-spread, spread);
