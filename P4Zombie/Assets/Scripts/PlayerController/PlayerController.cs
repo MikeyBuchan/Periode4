@@ -234,13 +234,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("EscapeAccu"))
         {
+            manager.GetComponent<UI>().accuPanel.SetActive(true);
             if (WireHolder == null)
             {
-                manager.GetComponent<UI>().accuPanel.SetActive(true);
                 if (manager.GetComponent<UI>().accuPanel == true && Input.GetButton("Interact") == true)
                 {
                     //GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                     //WireHolder = null;
+                    GameObject.FindWithTag("Wireholder").GetComponent<Image>().sprite = manager.GetComponent<UI>().carAccu;
                     manager.GetComponent<UI>().accuPanel.SetActive(false);
                 }
             }
