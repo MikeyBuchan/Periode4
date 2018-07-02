@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
         OpenShop();
         GeneratorSwitch();
         VictorySwitch();
+        PickUpAccu();
 
         if (shopOpenBool == true && Input.GetButtonDown("Back"))
         {
@@ -183,25 +184,25 @@ public class PlayerController : MonoBehaviour
             if (WireHolder != null)
             {
                 Debug.Log("Got Wire");
-                manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(true);
-                if (manager.GetComponent<UI>().GeneratorGotWirePanel == true && Input.GetButton("Interact") == true)
+                manager.GetComponent<UI>().generatorGotWirePanel.SetActive(true);
+                if (manager.GetComponent<UI>().generatorGotWirePanel == true && Input.GetButton("Interact") == true)
                 {
                     GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                     WireHolder = null;
                     GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
-                    manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
+                    manager.GetComponent<UI>().generatorGotWirePanel.SetActive(false);
                 }
             }
             else
             {
                 Debug.Log("Need Wire");
-                manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(true);
+                manager.GetComponent<UI>().generatorNeedWirePanel.SetActive(true);
             }
         }
         else
         {
-            manager.GetComponent<UI>().GeneratorGotWirePanel.SetActive(false);
-            manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(false);
+            manager.GetComponent<UI>().generatorGotWirePanel.SetActive(false);
+            manager.GetComponent<UI>().generatorNeedWirePanel.SetActive(false);
         }
     }
 
@@ -212,21 +213,41 @@ public class PlayerController : MonoBehaviour
             if (WireHolder != null)
             {
                 Debug.Log("Got Wire");
-                manager.GetComponent<UI>().VicPanel.SetActive(true);
-                if (manager.GetComponent<UI>().VicPanel == true && Input.GetButton("Interact") == true)
+                manager.GetComponent<UI>().vicPanel.SetActive(true);
+                if (manager.GetComponent<UI>().vicPanel == true && Input.GetButton("Interact") == true)
                 {
                     GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                     WireHolder = null;
-                    manager.GetComponent<UI>().VicPanel.SetActive(false);
+                    manager.GetComponent<UI>().vicPanel.SetActive(false);
                     Debug.Log("Victory");
                 }
             }
             else
             {
                 Debug.Log("Need Wire");
-                manager.GetComponent<UI>().GeneratorNeedWirePanel.SetActive(true);
+                manager.GetComponent<UI>().generatorNeedWirePanel.SetActive(true);
             }
         }
     }
 
+    public void PickUpAccu()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("EscapeAccu"))
+        {
+            if (WireHolder == null)
+            {
+                manager.GetComponent<UI>().accuPanel.SetActive(true);
+                if (manager.GetComponent<UI>().accuPanel == true && Input.GetButton("Interact") == true)
+                {
+                    //GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
+                    //WireHolder = null;
+                    manager.GetComponent<UI>().accuPanel.SetActive(false);
+                }
+            }
+            else
+            {
+                Debug.Log("Open New Area First");
+            }
+        }
+    }
 }
