@@ -39,28 +39,23 @@ public class MobSpawner : MonoBehaviour
 
     public virtual void StartNewWave()
     {
-        for (int i = 0; i < GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr.Length; i++)
-        {
-            Debug.Log("ForLoop StartNewWave");
-            if (GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().spawnerActive == true)
-            {
-                curSpawned = 0;
-                spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
-                Debug.Log("ForLoop StartNewWave na if");
-                break;
-            }
-        }
-    
-
         GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().zombieHealth += GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().AddHealthForNewWave;
         if (GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage < GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().maxDamage)
         {
             GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage += GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().addDamageForNewWave;
         }
-
         man.GetComponent<Manager>().waveCounter++;
+
+        for (int i = 0; i < GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr.Length; i++)
+        {
+            if (GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().spawnerActive == true)
+            {
+                curSpawned = 0;
+                spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
+                man.GetComponent<Manager>().CheckSpawner();
+            }
+        }
         maySpawn = true;
-        man.GetComponent<Manager>().CheckSpawner();
     }
 
     public void SpawnZombie()

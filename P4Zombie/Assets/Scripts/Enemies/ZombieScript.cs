@@ -46,8 +46,6 @@ public class ZombieScript : MonoBehaviour
             canDoDammage = false;
             StartCoroutine(DoDamageTimer());
         }
-        Debug.Log(GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().playerHealth);
-
     }
 
     IEnumerator DoDamageTimer()

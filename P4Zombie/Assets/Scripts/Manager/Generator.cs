@@ -18,7 +18,6 @@ public class Generator : MonoBehaviour
         {
             if (barricade[i].gameObject.activeSelf == true)
             {
-                Debug.Log(i + "New Zone");
                 barricade[i].SetActive(false);
                 break;
             }
@@ -28,7 +27,6 @@ public class Generator : MonoBehaviour
         {
             if (spawnersArr[i].gameObject.activeSelf == false)
             {
-                Debug.Log(i + "New Spawner");
                 spawnersArr[i].SetActive(true);
                 spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().spawnerActive = true;
                 break;
