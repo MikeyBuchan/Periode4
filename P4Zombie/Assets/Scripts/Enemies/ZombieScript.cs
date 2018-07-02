@@ -42,8 +42,9 @@ public class ZombieScript : MonoBehaviour
     {
         if (canDoDammage == true)
         {
-            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().playerHealth -= damage;
+            GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().CurrentHealth -= damage;
             canDoDammage = false;
+            GetComponent<PlayerHealth>().healthbar.value = GetComponent<PlayerHealth>().CurrentHealth / GetComponent<PlayerHealth>().MaxHealth;
             StartCoroutine(DoDamageTimer());
         }
     }
