@@ -27,7 +27,7 @@ public class WeaponSwitch : MonoBehaviour {
             if (activeIndex == 0)
             {
                 activeIndex = 1;
-                transform.GetChild(1).gameObject.SetActive(true);
+ 
                 transform.GetChild(0).gameObject.SetActive(false);
             }
             else

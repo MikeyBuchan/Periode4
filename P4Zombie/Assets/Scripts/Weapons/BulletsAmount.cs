@@ -15,7 +15,7 @@ public class BulletsAmount : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         weapon = player.GetComponent<PlayerController>().Weapons[0];
-        ammo = weapon.GetComponent<DesserdEagle>().ammo;
-        gameObject.GetComponent<Text>().text = "" + weapon.GetComponent<DesserdEagle>().ammo;
+        ammo = weapon.GetComponent<DesserdEagle>().bulletInClip;
+        gameObject.GetComponent<Text>().text = "" + ammo;
 	}
 }
