@@ -95,3 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61eeb7ecd421d3848b42f68f0f3e86cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleeDamage: 0
+  meleeDamageBase: 50
+  emptyStanimaDamage: 25
+  staminaDrain: 20
+  range: 3
+  attackspeed: 5

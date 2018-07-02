@@ -95,3 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14bdb8a5857ce6419c21294ebeba0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 6
+  range: 8
+  fireRate: 0.1
+  automatic: 1
+  canFire: 1
+  reloadTime: 0
+  bulletInClip: 0
+  clipSize: 100
+  ammo: 500
+  ownValue: 0
