@@ -5,15 +5,24 @@ using UnityEngine.UI;
 
 public class PlayerHealth : HealthBase
 {
-    public int playerHealth;
-    public GameObject hpNumber;
-    public string playerHealthText;
+    public Slider healthbar;
+    public float MaxHealth;
+    public float CurrentHealth;
+
+    public void Start()
+    {
+        MaxHealth = CurrentHealth;
+        healthbar.value = CalculatedHealth();
+     
+    }
+    float CalculatedHealth()
+    {
+        return CurrentHealth / MaxHealth;
+    }
 
     void Update ()
     {
-        playerHealthText = "" + playerHealth;
-        hpNumber.GetComponent<Text>().text = playerHealthText;
-        if (playerHealth == 0)
+        if (CurrentHealth == 0)
         {
             Debug.Log("gameOver");
             GameObject.FindWithTag("Manager").GetComponent<UI>().gameOverPanel.SetActive(true);

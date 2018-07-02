@@ -16,6 +16,14 @@ public class WeaponSwitch : MonoBehaviour {
     {
 		if(Input.GetButtonDown("WeaponSwitch") == true)
         {
+            if (transform.childCount != 2)
+            {
+                GameObject x = Instantiate(player.GetComponent<PlayerController>().Weapons[1], transform.position, transform.rotation);
+                x.transform.SetParent(transform);
+                x.SetActive(false);
+                x = null;
+            }
+
             Switch();
         }
 	}
@@ -27,7 +35,7 @@ public class WeaponSwitch : MonoBehaviour {
             if (activeIndex == 0)
             {
                 activeIndex = 1;
- 
+                transform.GetChild(1).gameObject.SetActive(true);
                 transform.GetChild(0).gameObject.SetActive(false);
             }
             else
@@ -35,14 +43,6 @@ public class WeaponSwitch : MonoBehaviour {
                 activeIndex = 0;
                 transform.GetChild(0).gameObject.SetActive(true);
                 transform.GetChild(1).gameObject.SetActive(false);
-            }
-
-            if (transform.childCount != 2)
-            {
-                GameObject x = Instantiate(player.GetComponent<PlayerController>().Weapons[activeIndex], transform.position, transform.rotation);
-                x.transform.SetParent(transform);
-                x.SetActive(false);
-                x = null;
             }
         }
     }

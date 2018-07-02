@@ -13,10 +13,11 @@ public class UI : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject gameOverCamera;
 
-    public GameObject GeneratorNeedWirePanel;
-    public GameObject GeneratorGotWirePanel;
+    public GameObject generatorNeedWirePanel;
+    public GameObject generatorGotWirePanel;
 
-    public GameObject VicPanel;
+    public GameObject vicPanel;
+    public GameObject accuPanel;
 
 	void Start ()
     {
@@ -29,10 +30,11 @@ public class UI : MonoBehaviour
         gameOverPanel.SetActive(false);
         gameOverCamera.SetActive(false);
 
-        GeneratorNeedWirePanel.SetActive(false);
-        GeneratorGotWirePanel.SetActive(false);
+        generatorNeedWirePanel.SetActive(false);
+        generatorGotWirePanel.SetActive(false);
 
-        VicPanel.SetActive(false);
+        vicPanel.SetActive(false);
+        accuPanel.SetActive(false);
 	}
 
     public void Restart()
