@@ -874,6 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179c6dc55bede3a4a83e50c42337eaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carAccu: {fileID: 0}
   shopPanel: {fileID: 1699432206}
   openShopPanel: {fileID: 1395798797}
   closeShopPanel: {fileID: 452677580}
@@ -4025,7 +4026,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2b22a69e60773c34f8da0eed1ac9484e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11786,6 +11787,16 @@ Prefab:
       propertyPath: Weapons.Array.data[0]
       value: 
       objectReference: {fileID: 1683283429}
+    - target: {fileID: 114929608853055228, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
+        type: 2}
+      propertyPath: CurrentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114929608853055228, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
+        type: 2}
+      propertyPath: MaxHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
   m_IsPrefabParent: 0
