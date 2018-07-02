@@ -244,8 +244,8 @@ public class PlayerController : MonoBehaviour
                     {
                         GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                         WireHolder = null;
+                        manager.GetComponent<UI>().YouWin();
                         manager.GetComponent<UI>().vicPanel.SetActive(false);
-                        Debug.Log("Victory");
                     }
                 }
                 else

@@ -21,6 +21,7 @@ public class UI : MonoBehaviour
     public GameObject vicPanel;
     public GameObject accuPanel;
     public GameObject needAccuPanel;
+    public GameObject youWinPanel;
 
 	void Start ()
     {
@@ -39,6 +40,7 @@ public class UI : MonoBehaviour
         vicPanel.SetActive(false);
         accuPanel.SetActive(false);
         needAccuPanel.SetActive(false);
+        youWinPanel.SetActive(false);
 	}
 
     public void Restart()
@@ -50,5 +52,13 @@ public class UI : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Player has Quit");
+    }
+
+    public void YouWin()
+    {
+        youWinPanel.SetActive(true);
+        gameOverPanel.SetActive(true);
+        gameOverPanel.transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().CurrentHealth = 10000;
     }
 }

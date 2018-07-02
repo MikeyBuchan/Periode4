@@ -6,6 +6,7 @@ public class Generator : MonoBehaviour
 {
     public GameObject[] barricade;
     public GameObject[] spawnersArr;
+    public GameObject[] lightsArr;
 
     void Start()
     {
@@ -30,6 +31,17 @@ public class Generator : MonoBehaviour
                 spawnersArr[i].SetActive(true);
                 spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().spawnerActive = true;
                 break;
+            }
+        }
+
+        for (int i = 0; i < lightsArr.Length; i++)
+        {
+            lightsArr[i].SetActive(true);
+            break;
+
+            if (lightsArr[i].gameObject.activeSelf == false)
+            {
+
             }
         }
     }
