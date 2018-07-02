@@ -15,7 +15,7 @@ public class PlayerHealth : HealthBase
         healthbar.value = CalculatedHealth();
      
     }
-    float CalculatedHealth()
+   public float CalculatedHealth()
     {
         return CurrentHealth / MaxHealth;
     }
