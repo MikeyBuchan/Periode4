@@ -12128,6 +12128,11 @@ Prefab:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 1319533753}
+    - target: {fileID: 54876012738147950, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
   m_IsPrefabParent: 0
