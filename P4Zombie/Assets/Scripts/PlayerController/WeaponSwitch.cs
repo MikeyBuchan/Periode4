@@ -16,7 +16,7 @@ public class WeaponSwitch : MonoBehaviour {
     {
 		if(Input.GetButtonDown("WeaponSwitch") == true)
         {
-            if (transform.childCount != 2)
+            if (transform.childCount != 2 && player.GetComponent<PlayerController>().Weapons.Count != 0)
             {
                 GameObject x = Instantiate(player.GetComponent<PlayerController>().Weapons[1], transform.position, transform.rotation);
                 x.transform.SetParent(transform);

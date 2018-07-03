@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
+    public Sprite wireSpriteHolder;
     public Sprite carAccu;
 
     public GameObject shopPanel;

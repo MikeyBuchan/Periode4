@@ -67,6 +67,7 @@ public class WeaponBase : MonoBehaviour
 
         bulletInClip -= 1;
         Debug.Log("Gun Fired");
+        Debug.DrawRay(transform.position, transform.forward * range, Color.green);
     }
 
     public virtual void Reload()
