@@ -44,7 +44,6 @@ public class ZombieScript : MonoBehaviour
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().CurrentHealth -= damage;
             canDoDammage = false;
-            GetComponent<PlayerHealth>().healthbar.value = GetComponent<PlayerHealth>().CalculatedHealth();
             StartCoroutine(DoDamageTimer());
         }
     }
