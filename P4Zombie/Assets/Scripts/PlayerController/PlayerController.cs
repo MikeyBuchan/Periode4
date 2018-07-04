@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             canSprint = true;
         }
+        
     }
 
     private void FixedUpdate()
