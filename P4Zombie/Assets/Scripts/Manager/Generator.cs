@@ -38,11 +38,6 @@ public class Generator : MonoBehaviour
         {
             lightsArr[i].SetActive(true);
             break;
-
-            if (lightsArr[i].gameObject.activeSelf == false)
-            {
-
-            }
         }
     }
 }
