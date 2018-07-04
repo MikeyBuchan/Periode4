@@ -25,7 +25,7 @@ public class WeaponBase : MonoBehaviour
         Instantiate(mf, transform.position + Vector3.forward, transform.rotation);
 
         bulletInClip = clipSize;
-        gunLoc = GameObject.Find("GunLocation");
+        gunLoc = GameObject.FindWithTag("MainCamera");
     }
 
     void Update ()

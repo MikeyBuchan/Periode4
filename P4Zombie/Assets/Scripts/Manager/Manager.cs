@@ -15,7 +15,7 @@ public class Manager : MonoBehaviour
             if (GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().spawnerActive == true)
             {
                 GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().SpawnZombie();
-                break;
+                
             }
         }
     }
