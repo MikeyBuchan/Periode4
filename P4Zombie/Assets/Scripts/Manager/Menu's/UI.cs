@@ -27,6 +27,8 @@ public class UI : MonoBehaviour
 
     public GameObject startUI;
     public bool pauzeGame;
+    public GameObject barHolder;
+    public GameObject barholder01;
 
 	void Start ()
     {
@@ -49,6 +51,8 @@ public class UI : MonoBehaviour
         BarricadePanel.SetActive(false);
 
         pauzeGame = true;
+        barHolder.SetActive(false);
+        barholder01.SetActive(false);
 	}
 
     void Update()
@@ -66,6 +70,8 @@ public class UI : MonoBehaviour
                 pauzeGame = false;
                 Time.timeScale = 1;
                 startUI.SetActive(false);
+                barHolder.SetActive(true);
+                barholder01.SetActive(true);
             }
         }
     }
