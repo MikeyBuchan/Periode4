@@ -15,6 +15,7 @@ TagManager:
   - EscapeCar
   - EscapeAccu
   - MuzzleFlash
+  - Baricade
   layers:
   - Default
   - TransparentFX
