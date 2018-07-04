@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Stamina")]
     public float maxStamina;
+    public float minStamina;
     public float stamina;
     public float timeTillStaminaRegen;
     public float staminaRegenRate;
@@ -46,6 +47,15 @@ public class PlayerController : MonoBehaviour
         if(timeSinceStaminaUse >= timeTillStaminaRegen && stamina <= maxStamina)
         {
             StaminaRegen();
+        }
+
+        if (stamina <= minStamina)
+        {
+            stamina = 0;
+            if (stamina == 0)
+            {
+                stamina += 1;
+            }
         }
 
         if(Input.GetButton("Sprint") == true && stamina > 0 && canSprint == true)

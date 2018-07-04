@@ -53,6 +53,7 @@ public class UI : MonoBehaviour
         pauzeGame = true;
         barHolder.SetActive(false);
         barholder01.SetActive(false);
+        GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = false;
 	}
 
     void Update()
@@ -72,6 +73,7 @@ public class UI : MonoBehaviour
                 startUI.SetActive(false);
                 barHolder.SetActive(true);
                 barholder01.SetActive(true);
+                GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = true;
             }
         }
     }

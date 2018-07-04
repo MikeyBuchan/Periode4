@@ -10,7 +10,6 @@ public class ZombieScript : MonoBehaviour
     public float targetDistance;
     public float attackRange;
     public int damage;
-    public int addDamageForNewWave;
     public int maxDamage;
     public bool canDoDammage;
     public float waitTimeForDamage;

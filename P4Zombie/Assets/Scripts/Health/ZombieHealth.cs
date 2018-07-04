@@ -8,7 +8,6 @@ public class ZombieHealth : HealthBase
     GameObject man;
     public int ownIndex;
     public int zombieHealth;
-    public int AddHealthForNewWave;
 
     void Start()
     {
