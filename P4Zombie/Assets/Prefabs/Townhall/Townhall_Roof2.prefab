@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1171366358967568}
+  m_RootGameObject: {fileID: 1094347329520808}
   m_IsPrefabParent: 1
---- !u!1 &1171366358967568
+--- !u!1 &1094347329520808
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4891404519132202}
-  - component: {fileID: 33367945409474244}
-  - component: {fileID: 23435203626772338}
+  - component: {fileID: 4006949923266604}
+  - component: {fileID: 33045013866058894}
+  - component: {fileID: 23669691122022532}
   m_Layer: 0
   m_Name: Townhall_Roof2
   m_TagString: Untagged
@@ -28,25 +28,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4891404519132202
+--- !u!4 &4006949923266604
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1171366358967568}
+  m_GameObject: {fileID: 1094347329520808}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -3.9698136, y: 0.5937703, z: -8.198609}
+  m_LocalPosition: {x: -2.0996, y: 0.2, z: 8.9816}
   m_LocalScale: {x: 1, y: 1.0000033, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23435203626772338
+--- !u!23 &23669691122022532
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1171366358967568}
+  m_GameObject: {fileID: 1094347329520808}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 55905c5402825ed46957981df683a42a, type: 2}
+  - {fileID: 2100000, guid: 460799c716d881f458026f2c68031ab0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,10 +76,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33367945409474244
+--- !u!33 &33045013866058894
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1171366358967568}
+  m_GameObject: {fileID: 1094347329520808}
   m_Mesh: {fileID: 4300000, guid: 73b0d37ddf4e27e4288863474b26734b, type: 3}
