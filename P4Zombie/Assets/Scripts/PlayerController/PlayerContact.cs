@@ -49,10 +49,10 @@ public class PlayerContact : MonoBehaviour
 
                 shopOpenBool = true;
                 Debug.Log(shopOpenBool);
-                if (Input.GetButton("Back") == true)
-                {
+            }
+            if (Input.GetButton("Back") == true && shopOpenBool == true)
+            {
                     GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
-                }
             }
 
         }
