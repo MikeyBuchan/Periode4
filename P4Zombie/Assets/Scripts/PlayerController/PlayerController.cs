@@ -37,9 +37,6 @@ public class PlayerController : MonoBehaviour
     {
         stamina = maxStamina;
         moveSpeedReset = moveSpeed;
-
-
-
     }
 
     void Update ()
