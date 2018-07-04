@@ -7,6 +7,6 @@ public class WireBuy : MonoBehaviour
     void BuyWire()
     {
         GameObject.FindGameObjectWithTag("WireTag").SetActive(true);
-        GameObject.FindGameObjectWithTag("Player")
+        GameObject.FindGameObjectWithTag("Player");
     }
 }
