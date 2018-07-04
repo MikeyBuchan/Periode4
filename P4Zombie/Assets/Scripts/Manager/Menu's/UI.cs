@@ -25,6 +25,9 @@ public class UI : MonoBehaviour
     public GameObject youWinPanel;
     public GameObject BarricadePanel;
 
+    public GameObject startUI;
+    public bool pauzeGame;
+
 	void Start ()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -44,7 +47,28 @@ public class UI : MonoBehaviour
         needAccuPanel.SetActive(false);
         youWinPanel.SetActive(false);
         BarricadePanel.SetActive(false);
+
+        pauzeGame = true;
 	}
+
+    void Update()
+    {
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        if (pauzeGame == true)
+        {
+            Time.timeScale = 0;
+            if (Input.GetButtonDown("Interact"))
+            {
+                pauzeGame = false;
+                Time.timeScale = 1;
+                startUI.SetActive(false);
+            }
+        }
+    }
 
     public void Restart()
     {
