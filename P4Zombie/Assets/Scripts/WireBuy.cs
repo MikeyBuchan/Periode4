@@ -8,7 +8,7 @@ public class WireBuy : MonoBehaviour
     public void BuyWire()
     {
         GameObject.FindGameObjectWithTag("WireTag").SetActive(true);
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().WireHolder = GameObject.FindWithTag("Manager").GetComponent<UI>().wireSpriteHolder;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerContact>().WireHolder = GameObject.FindWithTag("Manager").GetComponent<UI>().wireSpriteHolder;
         GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = GameObject.FindWithTag("Manager").GetComponent<UI>().wireSpriteHolder;
     }
 }

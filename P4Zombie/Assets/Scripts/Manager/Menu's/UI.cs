@@ -23,6 +23,7 @@ public class UI : MonoBehaviour
     public GameObject accuPanel;
     public GameObject needAccuPanel;
     public GameObject youWinPanel;
+    public GameObject BarricadePanel;
 
 	void Start ()
     {
@@ -42,6 +43,7 @@ public class UI : MonoBehaviour
         accuPanel.SetActive(false);
         needAccuPanel.SetActive(false);
         youWinPanel.SetActive(false);
+        BarricadePanel.SetActive(false);
 	}
 
     public void Restart()

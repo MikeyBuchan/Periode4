@@ -19,7 +19,7 @@ public class WeaponBase : MonoBehaviour
 
     public ParticleSystem mf;
 
-    private void Start()
+    void Start()
     {
         Instantiate(mf, transform.position + Vector3.forward, transform.rotation);
 
