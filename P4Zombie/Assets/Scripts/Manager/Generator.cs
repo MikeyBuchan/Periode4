@@ -7,37 +7,11 @@ public class Generator : MonoBehaviour
     public GameObject[] barricade;
     public GameObject[] spawnersArr;
     public GameObject[] lightsArr;
-<<<<<<< HEAD
-    public GameObject[] leverArr;
-    public GameObject[] brokeWireArr;
-=======
     public GameObject[] brokenWireArr;
     public GameObject[] LeverArr;
->>>>>>> 8b84d0affa4368b465f6ae70458b0b16f4cbdf77
 
-    public void CheckBrokenWire()
+    void Start()
     {
-<<<<<<< HEAD
-        for (int i = 0; i < brokeWireArr.Length; i++)
-        {
-            if (brokeWireArr[i].gameObject.activeSelf == true)
-            {
-                brokeWireArr[i].gameObject.SetActive(false);
-                GameObject.FindWithTag("Lever").GetComponent<Lever>().active = true;
-                CheckLever();
-            }
-        }
-    }
-
-    public void CheckLever()
-    {
-        for (int i = 0; i < leverArr.Length; i++)
-        {
-            if (leverArr[i].gameObject.GetComponent<Lever>().active == true) 
-            {
-                leverArr[i].gameObject.GetComponent<Lever>().FlipSwitch();
-                break;
-=======
 
     }
 
@@ -56,8 +30,7 @@ public class Generator : MonoBehaviour
         {
             if (LeverArr[i])
             {
-
->>>>>>> 8b84d0affa4368b465f6ae70458b0b16f4cbdf77
+                Debug.Log("nog verder hier");
             }
         }
     }
