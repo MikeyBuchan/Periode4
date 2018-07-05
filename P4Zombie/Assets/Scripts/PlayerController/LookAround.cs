@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class LookAround : MonoBehaviour
 {
-    public int clampAmount;
-
     public float sensitivity;
-    Vector3 xRotation;
-    Vector3 yRotation;
-    public GameObject cameraY;
+    private Transform player;
+    private Vector3 v;
 
-    void Update ()
+
+    void Start()
     {
-        Look();
-	}
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
-    void Look()
+
+    void Update()
     {
-        xRotation.x += Input.GetAxis("Mouse Y") * sensitivity;
-        yRotation.y = Input.GetAxis("Mouse X");
-
-        cameraY.transform.Rotate(yRotation * (sensitivity * 20) * Time.deltaTime);
-
-        xRotation.x = Mathf.Clamp(xRotation.x, -clampAmount, clampAmount);
-        transform.localEulerAngles = new Vector3(-xRotation.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        transform.Rotate((-Input.GetAxis("Mouse Y")) * sensitivity * Time.deltaTime, 0, 0);
+        player.Rotate(0, (Input.GetAxis("Mouse X")) * sensitivity * Time.deltaTime, 0);
     }
 }

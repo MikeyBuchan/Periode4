@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1035658005942434}
+  m_RootGameObject: {fileID: 1640752931099978}
   m_IsPrefabParent: 1
---- !u!1 &1035658005942434
+--- !u!1 &1640752931099978
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4485442710552380}
-  - component: {fileID: 33519779423051216}
-  - component: {fileID: 23004298719056710}
+  - component: {fileID: 4393580573872120}
+  - component: {fileID: 33851837322645550}
+  - component: {fileID: 23968146508118238}
   m_Layer: 0
   m_Name: Townhall_Roof_End2
   m_TagString: Untagged
@@ -28,25 +28,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4485442710552380
+--- !u!4 &4393580573872120
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1035658005942434}
+  m_GameObject: {fileID: 1640752931099978}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 4.5372505, y: 0.068625145, z: -6.643708}
+  m_LocalPosition: {x: 184.62326, y: 0.06862517, z: 180.65858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23004298719056710
+--- !u!23 &23968146508118238
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1035658005942434}
+  m_GameObject: {fileID: 1640752931099978}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 104afe3edc907d249bfecde68f026fa9, type: 2}
+  - {fileID: 2100000, guid: f4e285fd13115004b9307f4aa52bcad8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,10 +76,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33519779423051216
+--- !u!33 &33851837322645550
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1035658005942434}
+  m_GameObject: {fileID: 1640752931099978}
   m_Mesh: {fileID: 4300000, guid: 777026a65f7e52342b8cbac441bebf6d, type: 3}
