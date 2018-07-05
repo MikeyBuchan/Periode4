@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33218930075809656}
   - component: {fileID: 23402872722718264}
   m_Layer: 0
-  m_Name: Townhall_Doorframe
+  m_Name: Townhall_DoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
