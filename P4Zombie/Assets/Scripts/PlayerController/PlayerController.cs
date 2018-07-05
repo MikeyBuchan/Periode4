@@ -191,7 +191,7 @@ public class PlayerController : MonoBehaviour
                 {
                     GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                     WireHolder = null;
-                    GameObject.FindWithTag("Generator").GetComponent<Generator>().Checklevers();
+                    GameObject.FindWithTag("Generator").GetComponent<Generator>().CheckBrokenWire();
                     manager.GetComponent<UI>().generatorGotWirePanel.SetActive(false);
                 }
             }
