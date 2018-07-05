@@ -7,10 +7,32 @@ public class Generator : MonoBehaviour
     public GameObject[] barricade;
     public GameObject[] spawnersArr;
     public GameObject[] lightsArr;
+    public GameObject[] brokenWireArr;
+    public GameObject[] LeverArr;
 
     void Start()
     {
 
+    }
+
+    public void CheckBrokenWire()
+    {
+        for (int i = 0; i < brokenWireArr.Length; i++)
+        {
+            if (brokenWireArr[i].gameObject.activeSelf == true)
+            {
+                brokenWireArr[i].gameObject.SetActive(false);
+
+            }
+        }
+
+        for (int i = 0; i < LeverArr.Length; i++)
+        {
+            if (LeverArr[i])
+            {
+
+            }
+        }
     }
 
     public void OpenNewArea()
