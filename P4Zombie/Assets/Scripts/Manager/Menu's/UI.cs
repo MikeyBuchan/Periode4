@@ -27,8 +27,6 @@ public class UI : MonoBehaviour
 
     public GameObject startUI;
     public bool pauzeGame;
-    public GameObject barHolder;
-    public GameObject barholder01;
 
     void Start()
     {
@@ -50,15 +48,15 @@ public class UI : MonoBehaviour
         youWinPanel.SetActive(false);
         BarricadePanel.SetActive(false);
 
-        pauzeGame = true;
-        barHolder.SetActive(false);
-        barholder01.SetActive(false);
         GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = false;
+        pauzeGame = true;
+        StartGame();
     }
 
     void Update()
     {
         StartGame();
+        
     }
 
     public void StartGame()
@@ -66,13 +64,11 @@ public class UI : MonoBehaviour
         if (pauzeGame == true)
         {
             Time.timeScale = 0;
-            if (Input.GetButtonDown("Interact"))
+            if(Input.GetButtonDown("Interact") == true)
             {
                 pauzeGame = false;
                 Time.timeScale = 1;
                 startUI.SetActive(false);
-                barHolder.SetActive(true);
-                barholder01.SetActive(true);
                 GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = true;
             }
         }
