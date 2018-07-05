@@ -10,7 +10,6 @@ public class ZombieScript : MonoBehaviour
     public float targetDistance;
     public float attackRange;
     public int damage;
-    public int addDamageForNewWave;
     public int maxDamage;
     public bool canDoDammage;
     public float waitTimeForDamage;
@@ -44,7 +43,6 @@ public class ZombieScript : MonoBehaviour
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().CurrentHealth -= damage;
             canDoDammage = false;
-            GetComponent<PlayerHealth>().healthbar.value = GetComponent<PlayerHealth>().CalculatedHealth();
             StartCoroutine(DoDamageTimer());
         }
     }

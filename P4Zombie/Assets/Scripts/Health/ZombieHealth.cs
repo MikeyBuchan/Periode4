@@ -8,7 +8,6 @@ public class ZombieHealth : HealthBase
     GameObject man;
     public int ownIndex;
     public int zombieHealth;
-    public int AddHealthForNewWave;
 
     void Start()
     {
@@ -16,7 +15,7 @@ public class ZombieHealth : HealthBase
         man = GameObject.FindWithTag("Manager");
     }
 
-    void Update ()
+    void Update()
     {
         if (zombieHealth <= 0)
         {

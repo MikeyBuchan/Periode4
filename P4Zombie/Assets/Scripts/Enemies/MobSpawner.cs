@@ -27,7 +27,7 @@ public class MobSpawner : MonoBehaviour
 
     void CheckWave()
     {
-        if(curSpawned < spawnAmount)
+        if (curSpawned < spawnAmount)
         {
             maySpawn = true;
 
@@ -41,13 +41,12 @@ public class MobSpawner : MonoBehaviour
 
     public virtual void StartNewWave()
     {
-        GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().zombieHealth += GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().AddHealthForNewWave;
+        man.GetComponent<Manager>().waveCounter++;
+        GameObject.FindWithTag("Zombie").GetComponent<ZombieHealth>().zombieHealth += man.GetComponent<Manager>().AddHealthForNewWave;
         if (GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage < GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().maxDamage)
         {
-            GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage += GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().addDamageForNewWave;
+            GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage += man.GetComponent<Manager>().addDamageForNewWave;
         }
-        man.GetComponent<Manager>().waveCounter++;
-        
         maySpawn = true;
         CheckForSpawner();
     }
@@ -58,9 +57,11 @@ public class MobSpawner : MonoBehaviour
         {
             if (gen.GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().spawnerActive == true)
             {
+                Debug.Log(gen.GetComponent<Generator>().spawnersArr[i]);
                 gen.GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<MobSpawner>().curSpawned = 0;
                 gen.GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<MobSpawner>().spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
                 man.GetComponent<Manager>().CheckSpawner();
+
             }
         }
     }
@@ -69,7 +70,7 @@ public class MobSpawner : MonoBehaviour
     {
         if (maySpawn == true)
         {
-            StartCoroutine(Spawner()); 
+            StartCoroutine(Spawner());
         }
     }
 
