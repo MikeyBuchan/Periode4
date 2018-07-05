@@ -25,8 +25,7 @@ public class PlayerHealth : HealthBase
         if (CurrentHealth == 0)
         {
             Debug.Log("gameOver");
-            GameObject.FindWithTag("Manager").GetComponent<UI>().gameOverPanel.SetActive(true);
-            GameObject.FindWithTag("Manager").GetComponent<UI>().gameOverCamera.SetActive(true);
+            GameObject.FindWithTag("Manager").GetComponent<UI>().GameOver();
             Cursor.lockState = CursorLockMode.None;
             Destroy(gameObject);
         }

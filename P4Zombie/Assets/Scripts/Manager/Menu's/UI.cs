@@ -96,4 +96,10 @@ public class UI : MonoBehaviour
         gameOverPanel.transform.GetChild(0).gameObject.SetActive(false);
         GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().CurrentHealth = 10000;
     }
+
+    public void GameOver()
+    {
+        gameOverCamera.SetActive(true);
+        gameOverPanel.SetActive(true);
+    }
 }
