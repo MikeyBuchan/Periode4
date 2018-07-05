@@ -12,7 +12,7 @@ public class PlayerHealth : HealthBase
     public void Start()
     {
         MaxHealth = CurrentHealth;
-        healthbar.value = CalculatedHealth();
+        //healthbar.value = CalculatedHealth();
      
     }
    public float CalculatedHealth()
