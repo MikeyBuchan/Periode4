@@ -15,18 +15,18 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.8301887, g: 0.16838734, b: 0.16838734, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.16126736, g: 0.16126736, b: 0.2264151, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7e1e5781d39549148abcbf66c428df00, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -34,11 +34,11 @@ RenderSettings:
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
-  m_ReflectionBounces: 1
+  m_ReflectionBounces: 2
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2121169870}
-  m_IndirectSpecularColor: {r: 0.19294533, g: 0.16708681, b: 0.122574516, a: 1}
+  m_IndirectSpecularColor: {r: 0.22510481, g: 0.25166202, b: 0.32264084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000032, guid: cf1927276f0414241a952caea50a66c6,
+  m_LightingDataAsset: {fileID: 112000018, guid: 9113a130b4609fd4d882421ec94aca8b,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -2579,7 +2579,7 @@ GameObject:
   - component: {fileID: 227865518}
   m_Layer: 0
   m_Name: Baricade1_Temp (1)
-  m_TagString: Untagged
+  m_TagString: Baricade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5203,7 +5203,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &401343694
 Transform:
@@ -5945,6 +5945,18 @@ Prefab:
         type: 2}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814371780461366, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825673849382908, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001658290808368, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
@@ -15412,7 +15424,7 @@ GameObject:
   - component: {fileID: 1237975944}
   m_Layer: 0
   m_Name: Baricade1_Temp (2)
-  m_TagString: Untagged
+  m_TagString: Baricade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15478,7 +15490,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1237975943}
   m_LocalRotation: {x: -0, y: -0.25241148, z: -0, w: 0.96762}
-  m_LocalPosition: {x: 66.69, y: 0.96635497, z: 152.74}
+  m_LocalPosition: {x: 66.44, y: 0.96635497, z: 153.18}
   m_LocalScale: {x: 4.775152, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 7691582}
@@ -16376,6 +16388,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1014363517640544, guid: 4af9e9b8f72a7b84e825a26b3d80b7a8, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4af9e9b8f72a7b84e825a26b3d80b7a8, type: 2}
   m_IsPrefabParent: 0
@@ -16867,6 +16883,11 @@ Prefab:
     - target: {fileID: 1266046655158084, guid: 3db355024be4a5e4aa947b700e402641, type: 2}
       propertyPath: m_Name
       value: LightPoleHolder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108129378737782474, guid: 3db355024be4a5e4aa947b700e402641,
+        type: 2}
+      propertyPath: m_Cookie
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3db355024be4a5e4aa947b700e402641, type: 2}
@@ -21579,7 +21600,7 @@ GameObject:
   - component: {fileID: 1869771574}
   m_Layer: 0
   m_Name: Baricade1_Temp
-  m_TagString: Untagged
+  m_TagString: Baricade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21645,8 +21666,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869771573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 80.53, y: 0.96635497, z: 126.82}
-  m_LocalScale: {x: 6.0654507, y: 3, z: 1}
+  m_LocalPosition: {x: 79.86, y: 0.96635497, z: 126.82}
+  m_LocalScale: {x: 8.160208, y: 3.2683487, z: 1.0894495}
   m_Children: []
   m_Father: {fileID: 7691582}
   m_RootOrder: 0
@@ -24792,20 +24813,20 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.9622642, g: 0.79598314, b: 0.49474904, a: 1}
+  m_Color: {r: 0.4575472, g: 0.7344329, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
-  m_CookieSize: 10
+  m_CookieSize: 89
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_Bias: 0
+    m_NormalBias: 0
     m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 502d31ed4a26edf44bd1b549d1fac322, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -24825,13 +24846,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2121169869}
-  m_LocalRotation: {x: -0.10902937, y: -0.55321324, z: 0.82261264, w: -0.07332305}
-  m_LocalPosition: {x: 9.340813, y: 8.670275, z: 26.411037}
+  m_LocalRotation: {x: -0.12708186, y: -0.25180906, z: 0.95881623, w: -0.03337487}
+  m_LocalPosition: {x: 234.96, y: 2.81, z: 200.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 112.15799, y: -195.1, z: 0}
+  m_LocalEulerAnglesHint: {x: 150.57, y: -195.1, z: 0}
 --- !u!1001 &2123710455
 Prefab:
   m_ObjectHideFlags: 0
