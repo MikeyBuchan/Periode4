@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         moveSpeedReset = moveSpeed;
 
         manager = GameObject.FindWithTag("Manager");
-        WireHolder = GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite;
+        //WireHolder = GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite;
 
     }
 
@@ -191,7 +191,7 @@ public class PlayerController : MonoBehaviour
                 {
                     GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                     WireHolder = null;
-                    GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
+                    GameObject.FindWithTag("Generator").GetComponent<Generator>().Checklevers();
                     manager.GetComponent<UI>().generatorGotWirePanel.SetActive(false);
                 }
             }
