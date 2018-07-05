@@ -15,6 +15,7 @@ TagManager:
   - EscapeCar
   - EscapeAccu
   - MuzzleFlash
+  - Lever
   layers:
   - Default
   - TransparentFX
