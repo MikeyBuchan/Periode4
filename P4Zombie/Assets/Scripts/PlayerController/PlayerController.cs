@@ -51,26 +51,26 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Update ()
+    void Update()
     {
         timeSinceStaminaUse += Time.deltaTime;
 
-        if(timeSinceStaminaUse >= timeTillStaminaRegen && stamina <= maxStamina)
+        if (timeSinceStaminaUse >= timeTillStaminaRegen && stamina <= maxStamina)
         {
             StaminaRegen();
         }
 
-        if(Input.GetButton("Sprint") == true && stamina > 0 && canSprint == true)
+        if (Input.GetButton("Sprint") == true && stamina > 0 && canSprint == true)
         {
             Sprint();
         }
-        if(Input.GetButtonUp("Sprint") == true)
+        if (Input.GetButtonUp("Sprint") == true)
         {
             moveSpeed = moveSpeedReset;
         }
 
         //canSprint is false while walking backwards
-        if(Input.GetAxis("Vertical") < 0)
+        if (Input.GetAxis("Vertical") < 0)
         {
             canSprint = false;
         }
@@ -142,9 +142,9 @@ public class PlayerController : MonoBehaviour
     //Open things
     public void OpenShop()
     {
-        if(Physics.Raycast(transform.position,transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Shop"))
+        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Shop"))
         {
-            if(shopOpenBool == false)
+            if (shopOpenBool == false)
             {
                 manager.GetComponent<UI>().openShopPanel.SetActive(true);
             }
@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
             manager.GetComponent<UI>().openShopPanel.SetActive(false);
             manager.GetComponent<UI>().shopPanel.SetActive(false);
 
-            shopOpenBool = false;    
+            shopOpenBool = false;
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
     }
@@ -191,12 +191,8 @@ public class PlayerController : MonoBehaviour
                 {
                     GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
                     WireHolder = null;
-<<<<<<< HEAD
                     GameObject.FindWithTag("Generator").GetComponent<Generator>().CheckBrokenWire();
-=======
->>>>>>> 8bbd5013b36dd54bffa15d18bc5f20fce977ef7e
                     manager.GetComponent<UI>().generatorGotWirePanel.SetActive(false);
-                    GameObject.FindWithTag("Generator").GetComponent<Generator>().CheckBrokenWire();
                 }
             }
             else
