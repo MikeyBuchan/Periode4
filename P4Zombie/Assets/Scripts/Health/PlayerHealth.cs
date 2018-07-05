@@ -5,15 +5,20 @@ using UnityEngine.UI;
 
 public class PlayerHealth : HealthBase
 {
-    public GameObject healthbar;
+    public Slider healthbar;
     public float MaxHealth;
     public float CurrentHealth;
 
     public void Start()
     {
         MaxHealth = CurrentHealth;
+        healthbar.value = CalculatedHealth();
+     
     }
-
+   public float CalculatedHealth()
+    {
+        return CurrentHealth / MaxHealth;
+    }
 
     void Update ()
     {

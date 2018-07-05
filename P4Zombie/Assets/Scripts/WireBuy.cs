@@ -1,18 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class WireBuy : MonoBehaviour
 {
-    public void BuyWire()
+    void BuyWire()
     {
         GameObject.FindGameObjectWithTag("WireTag").SetActive(true);
-<<<<<<< HEAD
         GameObject.FindGameObjectWithTag("Player");
-=======
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerContact>().WireHolder = GameObject.FindWithTag("Manager").GetComponent<UI>().wireSpriteHolder;
-        GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = GameObject.FindWithTag("Manager").GetComponent<UI>().wireSpriteHolder;
->>>>>>> 7cb4911beb970eda746b2eed35b0584d1ccfd765
     }
 }

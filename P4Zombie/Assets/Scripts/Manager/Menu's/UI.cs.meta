@@ -3,24 +3,7 @@ guid: 179c6dc55bede3a4a83e50c42337eaa1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - wireSpriteHolder: {fileID: 21300000, guid: 189cda5a5a68bcd4cb5060addb10772d, type: 3}
-  - carAccu: {fileID: 21300000, guid: 790b06be174e44d468023d7cecf8eaf7, type: 3}
-  - shopPanel: {instanceID: 0}
-  - openShopPanel: {instanceID: 0}
-  - closeShopPanel: {instanceID: 0}
-  - gameOverPanel: {instanceID: 0}
-  - gameOverCamera: {instanceID: 0}
-  - generatorNeedWirePanel: {instanceID: 0}
-  - generatorGotWirePanel: {instanceID: 0}
-  - vicPanel: {instanceID: 0}
-  - accuPanel: {instanceID: 0}
-  - needAccuPanel: {instanceID: 0}
-  - youWinPanel: {instanceID: 0}
-  - BarricadePanel: {instanceID: 0}
-  - startUI: {instanceID: 0}
-  - barHolder: {instanceID: 0}
-  - barholder01: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
