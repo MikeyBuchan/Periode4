@@ -19,7 +19,7 @@ public class Shop : MonoBehaviour
     
     public void ExitShop()
     {
-        if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().shopOpenBool == true)
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerInteract>().shopOpenBool == true)
         {
             GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = true;
             GameObject.FindWithTag("Player").GetComponent<PlayerController>().moveSpeed = GameObject.FindWithTag("Player").GetComponent<PlayerController>().moveSpeedBaseValue;

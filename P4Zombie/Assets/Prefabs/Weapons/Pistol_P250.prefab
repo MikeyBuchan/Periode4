@@ -140,7 +140,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150335450759320}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.99144495, z: 0, w: -0.13052607}
   m_LocalPosition: {x: 222.7969, y: 0, z: 194.25691}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -150,7 +150,7 @@ Transform:
   - {fileID: 4023800995273650}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -195, z: 0}
 --- !u!4 &4890190113433580
 Transform:
   m_ObjectHideFlags: 1
@@ -306,12 +306,12 @@ MonoBehaviour:
   fireRate: 0.3
   automatic: 0
   canFire: 1
-  reloadTime: 0
+  reloadTime: 1
   bulletInClip: 0
   clipSize: 8
   ammo: 120
   ownValue: 0
-  mf: {fileID: 0}
+  mf: {fileID: 198240558044040644, guid: 69f4469e7711b8b4daff2b33120b9f5d, type: 2}
 --- !u!198 &198670201489311304
 ParticleSystem:
   m_ObjectHideFlags: 1

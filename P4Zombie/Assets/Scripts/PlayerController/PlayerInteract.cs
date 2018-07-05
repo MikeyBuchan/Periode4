@@ -10,13 +10,15 @@ public class PlayerInteract : MonoBehaviour
     public int hitShopRange;
     public RaycastHit hitShop;
     public bool shopOpenBool = false;
-    GameObject manager;
     public Sprite WireHolder;
+    GameObject manager;
 
     void Start()
     {
         manager = GameObject.FindWithTag("Manager");
         //WireHolder = GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite;
+        GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = null;
+
     }
 
     void Update()
@@ -25,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
         GeneratorSwitch();
         VictorySwitch();
         PickUpAccu();
-
+        BaricadeInteract();
     }
 
     public void OpenShop()
@@ -50,10 +52,11 @@ public class PlayerInteract : MonoBehaviour
 
                 shopOpenBool = true;
                 Debug.Log(shopOpenBool);
-                if (Input.GetButton("Back") == true)
-                {
-                    GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
-                }
+            }
+            if (Input.GetButtonDown("Back") == true && shopOpenBool == true)
+            {
+                GameObject.FindWithTag("Shop").GetComponent<Shop>().ExitShop();
+                Debug.Log("de if werkt");
             }
 
         }
@@ -150,6 +153,18 @@ public class PlayerInteract : MonoBehaviour
         else
         {
             manager.GetComponent<UI>().needAccuPanel.SetActive(false);
+        }
+    }
+
+    public void BaricadeInteract()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("Baricade"))
+        {
+            manager.GetComponent<UI>().BarricadePanel.SetActive(true);
+        }
+        else
+        {
+            manager.GetComponent<UI>().BarricadePanel.SetActive(false);
         }
     }
 
