@@ -11,11 +11,13 @@ public class MobSpawner : MonoBehaviour
     public int spawnAmount;
     public int curSpawned;
     GameObject man;
+    GameObject gen;
 
     void Start()
     {
         maySpawn = true;
         man = GameObject.FindWithTag("Manager");
+        gen = GameObject.FindWithTag("Generator");
     }
 
     void Update()
@@ -45,17 +47,22 @@ public class MobSpawner : MonoBehaviour
             GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().damage += GameObject.FindWithTag("Zombie").GetComponent<ZombieScript>().addDamageForNewWave;
         }
         man.GetComponent<Manager>().waveCounter++;
+        
+        maySpawn = true;
+        CheckForSpawner();
+    }
 
-        for (int i = 0; i < GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr.Length; i++)
+    public void CheckForSpawner()
+    {
+        for (int i = 0; i < gen.GetComponent<Generator>().spawnersArr.Length; i++)
         {
-            if (GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().spawnerActive == true)
+            if (gen.GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().spawnerActive == true)
             {
-                curSpawned = 0;
-                spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
+                gen.GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<MobSpawner>().curSpawned = 0;
+                gen.GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<MobSpawner>().spawnAmount += man.GetComponent<Manager>().spawAmountForNewWave;
                 man.GetComponent<Manager>().CheckSpawner();
             }
         }
-        maySpawn = true;
     }
 
     public void SpawnZombie()

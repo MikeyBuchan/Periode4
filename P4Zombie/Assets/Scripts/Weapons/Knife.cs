@@ -12,6 +12,12 @@ public class Knife : MonoBehaviour
     public float attackspeed;
 
     RaycastHit meleeHit;
+    GameObject weaponLoc;
+
+    private void Start()
+    {
+        weaponLoc = GameObject.FindWithTag("MainCamera");
+    }
 
     void Update()
     {
@@ -34,7 +40,7 @@ public class Knife : MonoBehaviour
             meleeDamage = meleeDamageBase;
         }
 
-        if (Physics.Raycast(GameObject.FindWithTag("MainCamera").GetComponent<Transform>().position, GameObject.FindWithTag("MainCamera").GetComponent<Transform>().forward, out meleeHit, range))
+        if (Physics.Raycast(weaponLoc.gameObject.transform.position, weaponLoc.gameObject.transform.forward, out meleeHit, range))
         {
             if (meleeHit.transform.tag == "Zombie")
             {
@@ -47,7 +53,7 @@ public class Knife : MonoBehaviour
                     Debug.Log("cur knife ++");
                 }
             }
-            Debug.DrawRay(transform.position, transform.forward * range, Color.green);
+            Debug.DrawRay(weaponLoc.gameObject.transform.position,weaponLoc.gameObject.transform.forward * range, Color.green);
         }
     }
 

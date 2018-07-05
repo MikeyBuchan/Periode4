@@ -12,10 +12,10 @@ public class Manager : MonoBehaviour
     {
         for (int i = 0; i < GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr.Length; i++)
         {
-            if (GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().spawnerActive == true)
+            if (GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr[i] == GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().spawnerActive == true)
             {
-                GameObject.FindWithTag("ZomSpawner").GetComponent<ZombieSpawn>().SpawnZombie();
-                break;
+                GameObject.FindWithTag("Generator").GetComponent<Generator>().spawnersArr[i].gameObject.GetComponent<ZombieSpawn>().SpawnZombie();
+                
             }
         }
     }

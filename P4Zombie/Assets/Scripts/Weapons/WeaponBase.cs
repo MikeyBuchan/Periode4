@@ -18,12 +18,14 @@ public class WeaponBase : MonoBehaviour
     public int ownValue;
 
     public ParticleSystem mf;
+    GameObject weaponLoc;
 
     private void Start()
     {
         Instantiate(mf, transform.position + Vector3.forward, transform.rotation);
 
         bulletInClip = clipSize;
+        weaponLoc = GameObject.FindWithTag("MainCamera");
     }
 
     void Update ()
@@ -51,7 +53,7 @@ public class WeaponBase : MonoBehaviour
     {
         mf.Play();
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, range))
+        if (Physics.Raycast(weaponLoc.gameObject.transform.position, weaponLoc.gameObject.transform.forward, out hit, range))
         {
             if(hit.transform.tag == "Zombie")
             {
@@ -67,6 +69,7 @@ public class WeaponBase : MonoBehaviour
 
         bulletInClip -= 1;
         Debug.Log("Gun Fired");
+        Debug.DrawRay(weaponLoc.gameObject.transform.position, weaponLoc.gameObject.transform.forward * range, Color.green);
     }
 
     public virtual void Reload()
