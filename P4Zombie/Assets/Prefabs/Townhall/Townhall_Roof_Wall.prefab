@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1774352212878830}
+  m_RootGameObject: {fileID: 1538396208387382}
   m_IsPrefabParent: 1
---- !u!1 &1774352212878830
+--- !u!1 &1538396208387382
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4526006630244132}
-  - component: {fileID: 33725524209824688}
-  - component: {fileID: 23103528930304782}
+  - component: {fileID: 4217473682547612}
+  - component: {fileID: 33259881693773232}
+  - component: {fileID: 23217114027295480}
   m_Layer: 0
   m_Name: Townhall_Roof_Wall
   m_TagString: Untagged
@@ -28,25 +28,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4526006630244132
+--- !u!4 &4217473682547612
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1774352212878830}
+  m_GameObject: {fileID: 1538396208387382}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.171008, y: 2.6107654e-15, z: -23.846363}
+  m_LocalPosition: {x: 180.82545, y: 2.5578159e-15, z: 176.7124}
   m_LocalScale: {x: 1, y: 1.0000042, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23103528930304782
+--- !u!23 &23217114027295480
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1774352212878830}
+  m_GameObject: {fileID: 1538396208387382}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -76,10 +76,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33725524209824688
+--- !u!33 &33259881693773232
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1774352212878830}
-  m_Mesh: {fileID: 4300000, guid: 7faff14b203371f4f9afe4e60404be47, type: 3}
+  m_GameObject: {fileID: 1538396208387382}
+  m_Mesh: {fileID: 4300000, guid: c4b55a8d2b018174fbae2dc84aa9e586, type: 3}
