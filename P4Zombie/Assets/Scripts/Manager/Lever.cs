@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    public bool active;
+    public bool leverIsSwitch;
 
-    public void FlipSwitch()
+    public void SwitchLever()
     {
-        if (active == true)
+        if (leverIsSwitch == true)
         {
             //play animation
             GameObject.FindWithTag("Generator").GetComponent<Generator>().OpenNewArea();
+
         }
     }
-
 }
