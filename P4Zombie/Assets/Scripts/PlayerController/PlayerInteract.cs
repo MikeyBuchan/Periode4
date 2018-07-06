@@ -103,13 +103,13 @@ public class PlayerInteract : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange) && hitShop.transform.tag == ("EscapeAccu"))
         {
-            if (WireHolder == null)
+            if (GameObject.FindWithTag("AccuTag").GetComponentInChildren<Image>().sprite == null)
             {
                 manager.GetComponent<UI>().accuPanel.SetActive(true);
                 if (manager.GetComponent<UI>().accuPanel == true && Input.GetButton("Interact") == true)
                 {
-                    GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = manager.GetComponent<UI>().carAccu;
-                    WireHolder = manager.GetComponent<UI>().carAccu;
+                    //GameObject.FindWithTag("WireTag").GetComponent<Image>().sprite = manager.GetComponent<UI>().carAccu;
+                    GameObject.FindWithTag("AccuTag").GetComponentInChildren<Image>().sprite = manager.GetComponent<UI>().carAccu;
                     manager.GetComponent<UI>().accuPanel.SetActive(false);
                 }
             }

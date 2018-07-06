@@ -17,6 +17,7 @@ TagManager:
   - MuzzleFlash
   - Lever
   - Baricade
+  - AccuTag
   layers:
   - Default
   - TransparentFX

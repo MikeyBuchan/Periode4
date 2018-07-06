@@ -10,6 +10,10 @@ public class MobSpawner : MonoBehaviour
     public bool spawnerActive;
     public int spawnAmount;
     public int curSpawned;
+    public GameObject[] zombRandomArr;
+    int randomZom;
+    public GameObject fatZomHolder;
+    public GameObject normalZomb;
     GameObject man;
     GameObject gen;
 
@@ -23,6 +27,19 @@ public class MobSpawner : MonoBehaviour
     void Update()
     {
         SpawnZombie();
+    }
+
+    public void ReandomZombie()
+    {
+        randomZom = Random.Range(0, zombRandomArr.Length);
+        if (randomZom == 0)
+        {
+            zombie = fatZomHolder;
+        }
+        if (randomZom == 1)
+        {
+            zombie = normalZomb;
+        }
     }
 
     void CheckWave()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    public bool leverIsSwitch;
+    public bool leverIsSwitch = false;
 
     public void SwitchLever()
     {
