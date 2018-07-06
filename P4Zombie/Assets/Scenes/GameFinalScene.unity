@@ -11443,6 +11443,18 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: db8afd8db73ef8645a2731bf73910a30, type: 3}
   m_PrefabInternal: {fileID: 327843792}
+--- !u!114 &499573745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499573743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6979884804561804283a6cf2575c0f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leverIsSwitch: 0
 --- !u!1 &499878669 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1121582867201358, guid: 51d29f9e1744ffe44872d2348294917b,
@@ -17257,7 +17269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownIndex: 0
-  zombieHealth: 0
+  zombieHealth: 5
 --- !u!1 &787170147 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1077111201350208, guid: f67ae6aed9ac3324ca990202ae951482,
@@ -30193,6 +30205,18 @@ MeshCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: db8afd8db73ef8645a2731bf73910a30, type: 3}
   m_PrefabInternal: {fileID: 1396780604}
+--- !u!114 &1446708662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446708660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6979884804561804283a6cf2575c0f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leverIsSwitch: 0
 --- !u!1 &1446943184
 GameObject:
   m_ObjectHideFlags: 0
@@ -38459,6 +38483,18 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: db8afd8db73ef8645a2731bf73910a30, type: 3}
   m_PrefabInternal: {fileID: 242333050}
+--- !u!114 &1881379767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881379765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6979884804561804283a6cf2575c0f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leverIsSwitch: 0
 --- !u!1 &1883115969
 GameObject:
   m_ObjectHideFlags: 0

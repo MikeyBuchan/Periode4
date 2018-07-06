@@ -51,6 +51,11 @@ public class UI : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponentInChildren<LookAround>().enabled = false;
         pauzeGame = true;
         StartGame();
+
+        if (Input.GetButtonDown("Switch"))
+        {
+            CheckWeaponAmmoUI();
+        }
     }
 
     void Update()
@@ -97,5 +102,23 @@ public class UI : MonoBehaviour
     {
         gameOverCamera.SetActive(true);
         gameOverPanel.SetActive(true);
+    }
+
+    public void CheckWeaponAmmoUI()
+    {
+        for (int i = 0; i < GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons.Count; i++)
+        {
+            if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons[i] == GameObject.Find("Knife"))
+            {
+                Debug.Log("Holding Knife");
+            }
+            else
+            {
+                GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons[i].gameObject.GetComponent<WeaponBase>().bulletInClip.ToString();
+                GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons[i].gameObject.GetComponent<WeaponBase>().clipSize.ToString();
+                break;
+            }
+
+        }
     }
 }

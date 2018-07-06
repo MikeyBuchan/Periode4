@@ -22,10 +22,16 @@ public class Generator : MonoBehaviour
             if (brokenWireArr[i].gameObject.activeSelf == true)
             {
                 brokenWireArr[i].gameObject.SetActive(false);
+                SomthingLever();
                 break;
             }
         }
 
+
+    }
+
+    public void SomthingLever()
+    {
         for (int i = 0; i < LeverArr.Length; i++)
         {
             if (LeverArr[i].gameObject.GetComponent<Lever>().leverIsSwitch == false)

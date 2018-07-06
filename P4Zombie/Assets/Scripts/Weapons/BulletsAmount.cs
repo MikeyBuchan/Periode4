@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class BulletsAmount : MonoBehaviour {
+
     public GameObject weapon;
     public GameObject player;
     public int ammo;
