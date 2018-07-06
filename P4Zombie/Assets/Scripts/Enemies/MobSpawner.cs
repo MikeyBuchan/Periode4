@@ -35,10 +35,12 @@ public class MobSpawner : MonoBehaviour
         if (randomZom == 0)
         {
             zombie = fatZomHolder;
+            StartCoroutine(Spawner());
         }
         if (randomZom == 1)
         {
             zombie = normalZomb;
+            StartCoroutine(Spawner());
         }
     }
 
@@ -87,7 +89,8 @@ public class MobSpawner : MonoBehaviour
     {
         if (maySpawn == true)
         {
-            StartCoroutine(Spawner());
+            //StartCoroutine(Spawner());
+            ReandomZombie();
         }
     }
 

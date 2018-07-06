@@ -376,9 +376,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4604934819198156}
+  - component: {fileID: 65321539104902302}
   m_Layer: 0
   m_Name: Barricade2
-  m_TagString: Untagged
+  m_TagString: Baricade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -805,8 +806,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656184864881428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.70009995, y: -4.478, z: 7.385}
+  m_LocalRotation: {x: -0, y: -0.9986295, z: 0, w: -0.052335896}
+  m_LocalPosition: {x: 239.08, y: -2.929, z: 177.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4981339295710138}
@@ -845,7 +846,7 @@ Transform:
   - {fileID: 4516417443605700}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -186, z: 0}
 --- !u!4 &4634319640107124
 Transform:
   m_ObjectHideFlags: 1
@@ -2521,3 +2522,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1079731340807170}
   m_Mesh: {fileID: 4300000, guid: ba86538e7516b244a9529f9ca327da87, type: 3}
+--- !u!65 &65321539104902302
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656184864881428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 2.03, z: 1}
+  m_Center: {x: 0.37, y: 3.96, z: -4.52}

@@ -27,6 +27,7 @@ public class UI : MonoBehaviour
 
     public GameObject startUI;
     public bool pauzeGame;
+    GameObject player;
 
     void Start()
     {
@@ -52,10 +53,11 @@ public class UI : MonoBehaviour
         pauzeGame = true;
         StartGame();
 
-        if (Input.GetButtonDown("Switch"))
+        if (Input.GetButtonDown("WeaponSwitch"))
         {
             CheckWeaponAmmoUI();
         }
+        player = GameObject.FindWithTag("Player");
     }
 
     void Update()
@@ -81,7 +83,7 @@ public class UI : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GameFinalScene");
     }
 
     public void Quit()
@@ -106,16 +108,16 @@ public class UI : MonoBehaviour
 
     public void CheckWeaponAmmoUI()
     {
-        for (int i = 0; i < GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons.Count; i++)
+        for (int i = 0; i < player.GetComponent<PlayerController>().Weapons.Count; i++)
         {
-            if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons[i] == GameObject.Find("Knife"))
+            if (player.GetComponent<PlayerController>().Weapons[i] == GameObject.Find("Knife"))
             {
                 Debug.Log("Holding Knife");
             }
             else
             {
-                GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons[i].gameObject.GetComponent<WeaponBase>().bulletInClip.ToString();
-                GameObject.FindWithTag("Player").GetComponent<PlayerController>().Weapons[i].gameObject.GetComponent<WeaponBase>().clipSize.ToString();
+                player.GetComponent<PlayerController>().Weapons[i].gameObject.GetComponent<WeaponBase>().bulletInClip.ToString();
+                player.GetComponent<PlayerController>().Weapons[i].gameObject.GetComponent<WeaponBase>().clipSize.ToString();
                 break;
             }
 

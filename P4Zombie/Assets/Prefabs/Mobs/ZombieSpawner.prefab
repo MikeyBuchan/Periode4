@@ -23,7 +23,7 @@ GameObject:
   m_Layer: 0
   m_Name: ZombieSpawner
   m_TagString: ZomSpawner
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -55,10 +55,11 @@ MonoBehaviour:
   spawTime: 3
   maySpawn: 0
   spawnerActive: 0
-  spawnAmount: 0
+  spawnAmount: 5
   curSpawned: 0
   zombRandomArr:
-  - {fileID: 0}
-  - {fileID: 1636347270687616, guid: 3d9fe8186c998574985df7ffce10b036, type: 2}
-  fatZomHolder: {fileID: 0}
-  normalZomb: {fileID: 1636347270687616, guid: 3d9fe8186c998574985df7ffce10b036, type: 2}
+  - {fileID: 1774002770861060, guid: ba9808741b6dde74884d7dbba0d14bee, type: 2}
+  - {fileID: 1196971618518228, guid: 8afa4b7a23d1edd47bdb7ee212327ef8, type: 2}
+  fatZomHolder: {fileID: 1774002770861060, guid: ba9808741b6dde74884d7dbba0d14bee,
+    type: 2}
+  normalZomb: {fileID: 1196971618518228, guid: 8afa4b7a23d1edd47bdb7ee212327ef8, type: 2}
